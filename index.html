@@ -986,7 +986,9 @@ a { color: inherit; text-decoration: none; }
         <button type="button" class="btn" data-form-toggle="completo">Roteiro personalizado (completo)</button>
       </div>
 
-      <form id="form-contato" data-form="simples" novalidate>
+      <form id="form-contato" data-form="simples" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Novo contato (formulário rápido) - Site ATF Travel">
+        <input type="hidden" name="formulario" value="Rápido">
         <div class="form-grid">
           <div class="campo">
             <label for="nome">Nome*</label>
@@ -1020,7 +1022,9 @@ a { color: inherit; text-decoration: none; }
         <p id="form-status" class="form-status"></p>
       </form>
 
-      <form id="form-contato-completo" data-form="completo" novalidate hidden>
+      <form id="form-contato-completo" data-form="completo" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate hidden>
+        <input type="hidden" name="_subject" value="Novo roteiro personalizado - Site ATF Travel">
+        <input type="hidden" name="formulario" value="Completo">
         <p class="form-hint">Quanto mais detalhes você nos der, mais preciso será o roteiro que vamos preparar.</p>
         <div class="form-grid">
           <div class="campo">
@@ -1993,43 +1997,116 @@ a { color: inherit; text-decoration: none; }
   });
 
   // Formulário de contato (demo)
-  var form = document.getElementById('form-contato');
-  if (form) {
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrpgawrj';
+  var WHATSAPP_NUMERO = '5519998117815';
+
+  function enviarFormulario(config) {
+    var form = document.getElementById(config.formId);
+    if (!form) return;
+    var status = document.getElementById(config.statusId);
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var status = document.getElementById('form-status');
-      var nome = form.nome.value.trim();
-      var telefone = form.telefone.value.trim();
-      var mensagem = form.mensagem.value.trim();
-      if (!nome || !telefone || !mensagem) {
-        status.textContent = 'Por favor, preencha nome, telefone e mensagem.';
+
+      var valores = {};
+      config.campos.forEach(function (c) {
+        valores[c.name] = (form[c.name] && form[c.name].value ? form[c.name].value : '').trim();
+      });
+
+      var faltando = config.obrigatorios.filter(function (campo) { return !valores[campo]; });
+      if (faltando.length) {
+        status.textContent = 'Por favor, preencha ' + config.obrigatoriosLabel + '.';
         status.className = 'form-status';
         return;
       }
-      status.textContent = 'Recebemos sua solicitação! Em breve nossa equipe entra em contato. (formulário de demonstração)';
-      status.className = 'form-status sucesso';
-      form.reset();
+
+      var interesses = form.querySelectorAll('input[name="interesses"]:checked');
+      var interessesTexto = Array.prototype.map.call(interesses, function (el) { return el.value; }).join(', ');
+
+      var botaoEnviar = form.querySelector('button[type="submit"]');
+      var textoOriginal = botaoEnviar.textContent;
+      botaoEnviar.disabled = true;
+      botaoEnviar.textContent = 'Enviando...';
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        botaoEnviar.disabled = false;
+        botaoEnviar.textContent = textoOriginal;
+        if (response.ok) {
+          status.innerHTML = config.mensagemSucesso;
+          status.className = 'form-status sucesso';
+
+          var whatsappTexto = config.montarMensagemWhatsapp(valores, interessesTexto);
+          var linkWhatsapp = document.createElement('a');
+          linkWhatsapp.href = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(whatsappTexto);
+          linkWhatsapp.target = '_blank';
+          linkWhatsapp.rel = 'noopener';
+          linkWhatsapp.className = 'btn btn-whatsapp';
+          linkWhatsapp.style.marginTop = '14px';
+          linkWhatsapp.style.display = 'inline-flex';
+          linkWhatsapp.textContent = 'Confirmar também por WhatsApp';
+          status.appendChild(document.createElement('br'));
+          status.appendChild(linkWhatsapp);
+
+          form.reset();
+        } else {
+          status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+          status.className = 'form-status';
+        }
+      }).catch(function () {
+        botaoEnviar.disabled = false;
+        botaoEnviar.textContent = textoOriginal;
+        status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+        status.className = 'form-status';
+      });
     });
   }
 
-  var formCompleto = document.getElementById('form-contato-completo');
-  if (formCompleto) {
-    formCompleto.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var status = document.getElementById('form-completo-status');
-      var nome = formCompleto.nome.value.trim();
-      var telefone = formCompleto.telefone.value.trim();
-      var destino = formCompleto.destino.value.trim();
-      if (!nome || !telefone || !destino) {
-        status.textContent = 'Por favor, preencha nome, telefone e destino.';
-        status.className = 'form-status';
-        return;
-      }
-      status.textContent = 'Recebemos seu roteiro! Nossa equipe vai analisar os detalhes e retornar com uma proposta personalizada. (formulário de demonstração)';
-      status.className = 'form-status sucesso';
-      formCompleto.reset();
-    });
-  }
+  enviarFormulario({
+    formId: 'form-contato',
+    statusId: 'form-status',
+    campos: [
+      { name: 'nome' }, { name: 'telefone' }, { name: 'email' },
+      { name: 'vertical' }, { name: 'mensagem' }
+    ],
+    obrigatorios: ['nome', 'telefone', 'mensagem'],
+    obrigatoriosLabel: 'nome, telefone e mensagem',
+    mensagemSucesso: 'Recebemos sua solicitação! Em breve nossa equipe entra em contato.',
+    montarMensagemWhatsapp: function (v) {
+      return 'Olá! Meu nome é ' + v.nome + '.\n' +
+        (v.vertical ? 'Vertical de interesse: ' + v.vertical + '\n' : '') +
+        'Mensagem: ' + v.mensagem;
+    }
+  });
+
+  enviarFormulario({
+    formId: 'form-contato-completo',
+    statusId: 'form-completo-status',
+    campos: [
+      { name: 'nome' }, { name: 'telefone' }, { name: 'email' }, { name: 'vertical' },
+      { name: 'destino' }, { name: 'data_ida' }, { name: 'duracao' },
+      { name: 'adultos' }, { name: 'criancas' }, { name: 'orcamento' },
+      { name: 'hospedagem' }, { name: 'mensagem' }
+    ],
+    obrigatorios: ['nome', 'telefone', 'destino'],
+    obrigatoriosLabel: 'nome, telefone e destino',
+    mensagemSucesso: 'Recebemos seu roteiro! Nossa equipe vai analisar os detalhes e retornar com uma proposta personalizada.',
+    montarMensagemWhatsapp: function (v, interesses) {
+      return 'Olá! Meu nome é ' + v.nome + ' e quero montar um roteiro personalizado.\n' +
+        'Destino: ' + v.destino + '\n' +
+        (v.data_ida ? 'Data de ida: ' + v.data_ida + '\n' : '') +
+        (v.duracao ? 'Duração: ' + v.duracao + '\n' : '') +
+        (v.adultos ? 'Adultos: ' + v.adultos + ' ' : '') +
+        (v.criancas ? 'Crianças: ' + v.criancas + '\n' : '\n') +
+        (v.orcamento ? 'Orçamento: ' + v.orcamento + '\n' : '') +
+        (v.hospedagem ? 'Hospedagem preferida: ' + v.hospedagem + '\n' : '') +
+        (interesses ? 'Interesses: ' + interesses + '\n' : '') +
+        (v.mensagem ? 'Observações: ' + v.mensagem : '');
+    }
+  });
 
   var formToggleButtons = document.querySelectorAll('[data-form-toggle]');
   formToggleButtons.forEach(function (btn) {
