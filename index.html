@@ -828,7 +828,15 @@ a { color: inherit; text-decoration: none; }
   <!-- SOBRE (resumo) -->
   <section class="section section-alt">
     <div class="container duas-colunas">
-      <div class="foto-placeholder">Espaço reservado para foto da equipe ATF Travel</div>
+      <div id="logo-sobre" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--borda);border-radius:3px;padding:60px 40px;min-height:260px;"></div>
+      <script>
+        (function () {
+          var img = document.querySelector('.logo-link img').cloneNode(true);
+          img.style.height = '90px';
+          img.style.width = 'auto';
+          document.getElementById('logo-sobre').appendChild(img);
+        })();
+      </script>
       <div>
         <span class="eyebrow">Quem somos</span>
         <h2>Uma agência construída sobre relacionamento e especialização</h2>
@@ -1035,11 +1043,6 @@ a { color: inherit; text-decoration: none; }
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="foto-placeholder" style="min-height:340px;">Espaço reservado para mapa de localização (Google Maps) da agência</div>
-    </div>
-  </section>
 
 
 </section>
