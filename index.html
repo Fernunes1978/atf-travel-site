@@ -489,6 +489,16 @@ a { color: inherit; text-decoration: none; }
 .form-status { margin-top: 16px; font-size: 0.9rem; }
 .form-status.sucesso { color: var(--verde-sage); }
 
+.form-toggle { display: flex; gap: 12px; margin-bottom: 30px; flex-wrap: wrap; }
+.form-toggle .btn.ativo { background: var(--preto-quente); color: #fff; }
+.campo-checks { display: flex; flex-wrap: wrap; gap: 10px 22px; }
+.campo-checks label {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.92rem; font-weight: normal; text-transform: none;
+  letter-spacing: normal; color: var(--texto);
+}
+.form-hint { font-size: 0.82rem; color: var(--texto-suave); margin: -18px 0 22px; }
+
 .contato-info-card {
   background: var(--bg-alt);
   padding: 40px 34px;
@@ -828,7 +838,15 @@ a { color: inherit; text-decoration: none; }
   <!-- SOBRE (resumo) -->
   <section class="section section-alt">
     <div class="container duas-colunas">
-      <div class="foto-placeholder">Espaço reservado para foto da equipe ATF Travel</div>
+      <div id="logo-sobre" style="display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid var(--borda);border-radius:3px;padding:60px 40px;min-height:260px;"></div>
+      <script>
+        (function () {
+          var img = document.querySelector('.logo-link img').cloneNode(true);
+          img.style.height = '90px';
+          img.style.width = 'auto';
+          document.getElementById('logo-sobre').appendChild(img);
+        })();
+      </script>
       <div>
         <span class="eyebrow">Quem somos</span>
         <h2>Uma agência construída sobre relacionamento e especialização</h2>
@@ -887,7 +905,7 @@ a { color: inherit; text-decoration: none; }
         <p>A ATF Travel é a evolução da Annestour, reconstruída para reunir, sob uma só identidade, cinco frentes de atuação altamente especializadas: viagens de lazer, luxo &amp; gastronomia, neve, esportes e viagens corporativas.</p>
         <p>A marca é conduzida por <strong>Anne Ferri</strong> e <strong>Fernando Nunes</strong>, sócios-fundadores que uniram experiência comercial consolidada com curadoria de hospedagens, destinos e experiências de luxo — e conhecimento técnico em viagens de neve — para desenhar um novo padrão de atendimento.</p>
       </div>
-      <div class="foto-placeholder">Espaço reservado para foto dos fundadores</div>
+      <div class="foto-secundaria"><img src="assets/socios.jpeg" alt="Anne Ferri e Fernando Nunes, sócios-fundadores da ATF Travel"></div>
     </div>
   </section>
 
@@ -961,7 +979,12 @@ a { color: inherit; text-decoration: none; }
   <section class="section">
     <div class="container duas-colunas" style="align-items:flex-start;">
 
-      <form id="form-contato" novalidate>
+      <div class="form-toggle">
+        <button type="button" class="btn btn-primary ativo" data-form-toggle="simples">Formulário rápido</button>
+        <button type="button" class="btn" data-form-toggle="completo">Roteiro personalizado (completo)</button>
+      </div>
+
+      <form id="form-contato" data-form="simples" novalidate>
         <div class="form-grid">
           <div class="campo">
             <label for="nome">Nome*</label>
@@ -995,6 +1018,93 @@ a { color: inherit; text-decoration: none; }
         <p id="form-status" class="form-status"></p>
       </form>
 
+      <form id="form-contato-completo" data-form="completo" novalidate hidden>
+        <p class="form-hint">Quanto mais detalhes você nos der, mais preciso será o roteiro que vamos preparar.</p>
+        <div class="form-grid">
+          <div class="campo">
+            <label for="c-nome">Nome*</label>
+            <input type="text" id="c-nome" name="nome" required>
+          </div>
+          <div class="campo">
+            <label for="c-telefone">Telefone / WhatsApp*</label>
+            <input type="tel" id="c-telefone" name="telefone" required>
+          </div>
+          <div class="campo full">
+            <label for="c-email">E-mail</label>
+            <input type="email" id="c-email" name="email">
+          </div>
+          <div class="campo full">
+            <label for="c-vertical">Vertical de interesse</label>
+            <select id="c-vertical" name="vertical">
+              <option value="">Selecione (opcional)</option>
+              <option value="ATF Travel">ATF Travel</option>
+              <option value="Luxury & Gastronomy">Luxury &amp; Gastronomy</option>
+              <option value="Snow Trip">Snow Trip</option>
+              <option value="Sports">Sports</option>
+              <option value="Corporate">Corporate</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="c-destino">Destino(s) desejado(s)*</label>
+            <input type="text" id="c-destino" name="destino" placeholder="Ex: Patagônia, Europa, Caribe..." required>
+          </div>
+          <div class="campo">
+            <label for="c-data-ida">Data de ida (ou previsão)</label>
+            <input type="text" id="c-data-ida" name="data_ida" placeholder="Ex: 15/12/2026 ou 'ainda não defini'">
+          </div>
+          <div class="campo">
+            <label for="c-duracao">Duração aproximada</label>
+            <input type="text" id="c-duracao" name="duracao" placeholder="Ex: 10 dias">
+          </div>
+          <div class="campo">
+            <label for="c-adultos">Nº de adultos</label>
+            <input type="number" id="c-adultos" name="adultos" min="1" placeholder="Ex: 2">
+          </div>
+          <div class="campo">
+            <label for="c-criancas">Nº de crianças</label>
+            <input type="number" id="c-criancas" name="criancas" min="0" placeholder="Ex: 0">
+          </div>
+          <div class="campo full">
+            <label for="c-orcamento">Faixa de orçamento estimada (por pessoa)</label>
+            <select id="c-orcamento" name="orcamento">
+              <option value="">Selecione (opcional)</option>
+              <option value="Até R$ 5.000">Até R$ 5.000</option>
+              <option value="R$ 5.000 a R$ 15.000">R$ 5.000 a R$ 15.000</option>
+              <option value="R$ 15.000 a R$ 30.000">R$ 15.000 a R$ 30.000</option>
+              <option value="Acima de R$ 30.000">Acima de R$ 30.000</option>
+              <option value="Prefiro conversar com um especialista">Prefiro conversar com um especialista</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="c-hospedagem">Categoria de hospedagem preferida</label>
+            <select id="c-hospedagem" name="hospedagem">
+              <option value="">Selecione (opcional)</option>
+              <option value="Conforto">Conforto</option>
+              <option value="Luxo">Luxo</option>
+              <option value="Ultra luxo">Ultra luxo</option>
+              <option value="Sem preferência">Sem preferência</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label>Interesses para essa viagem</label>
+            <div class="campo-checks">
+              <label><input type="checkbox" name="interesses" value="Gastronomia"> Gastronomia</label>
+              <label><input type="checkbox" name="interesses" value="Neve e esqui"> Neve e esqui</label>
+              <label><input type="checkbox" name="interesses" value="Aventura e esportes"> Aventura e esportes</label>
+              <label><input type="checkbox" name="interesses" value="Cultura e história"> Cultura e história</label>
+              <label><input type="checkbox" name="interesses" value="Praia e relax"> Praia e relax</label>
+              <label><input type="checkbox" name="interesses" value="Viagem corporativa"> Viagem corporativa</label>
+            </div>
+          </div>
+          <div class="campo full">
+            <label for="c-mensagem">Observações adicionais</label>
+            <textarea id="c-mensagem" name="mensagem" rows="4" placeholder="Preferências, restrições, ocasião especial, etc."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Enviar roteiro para orçamento</button>
+        <p id="form-completo-status" class="form-status"></p>
+      </form>
+
       <div class="contato-info-card">
         <h3>Outros canais</h3>
         <div class="contato-info-item">
@@ -1023,10 +1133,10 @@ a { color: inherit; text-decoration: none; }
         </div>
         <a href="https://wa.me/5519998117815" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:8px;">Falar no WhatsApp</a>
         <div class="social-links">
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/atf.annestour/" aria-label="Instagram" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/company/atgrouptravel/" aria-label="LinkedIn" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2c1-1.5 2.5-2.3 4.5-2.3 3 0 5.5 2 5.5 6V21h-4v-5.5c0-1.8-.7-3-2.3-3-1.3 0-2.2.9-2.5 1.8-.1.3-.2.7-.2 1.1V21h-4z"/></svg>
           </a>
         </div>
@@ -1035,11 +1145,6 @@ a { color: inherit; text-decoration: none; }
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="foto-placeholder" style="min-height:340px;">Espaço reservado para mapa de localização (Google Maps) da agência</div>
-    </div>
-  </section>
 
 
 </section>
@@ -1388,6 +1493,7 @@ a { color: inherit; text-decoration: none; }
       <div class="hero-actions">
         <a href="#" data-page="contato" data-vertical="Snow Trip" class="btn btn-light">Solicitar Orçamento</a>
         <a href="https://wa.me/5519998117815" target="_blank" rel="noopener" class="btn btn-whatsapp">Falar no WhatsApp</a>
+        <a href="https://www.instagram.com/atfsnowtrip/" target="_blank" rel="noopener" class="btn btn-light">Instagram @atfsnowtrip</a>
       </div>
     </div>
   </section>
@@ -1692,7 +1798,7 @@ a { color: inherit; text-decoration: none; }
 
   <section class="section section-alt">
     <div class="container duas-colunas">
-      <div class="foto-placeholder">Espaço reservado para foto — Fernando em viagem técnica</div>
+      <div class="foto-secundaria"><img src="assets/Fernando.jpeg" alt="Fernando Nunes em viagem técnica"></div>
       <div>
         <span class="eyebrow">Conexão com a ATF Travel</span>
         <h2>Complementando a atuação da Anne</h2>
@@ -1788,10 +1894,10 @@ a { color: inherit; text-decoration: none; }
           <li>contato@annestour.com.br</li>
         </ul>
         <div class="social-links">
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+          <a href="https://www.instagram.com/atf.annestour/" aria-label="Instagram" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/company/atgrouptravel/" aria-label="LinkedIn" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2c1-1.5 2.5-2.3 4.5-2.3 3 0 5.5 2 5.5 6V21h-4v-5.5c0-1.8-.7-3-2.3-3-1.3 0-2.2.9-2.5 1.8-.1.3-.2.7-.2 1.1V21h-4z"/></svg>
           </a>
           <a href="https://wa.me/5519998117815" aria-label="WhatsApp" target="_blank" rel="noopener">
@@ -1886,6 +1992,39 @@ a { color: inherit; text-decoration: none; }
       form.reset();
     });
   }
+
+  var formCompleto = document.getElementById('form-contato-completo');
+  if (formCompleto) {
+    formCompleto.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('form-completo-status');
+      var nome = formCompleto.nome.value.trim();
+      var telefone = formCompleto.telefone.value.trim();
+      var destino = formCompleto.destino.value.trim();
+      if (!nome || !telefone || !destino) {
+        status.textContent = 'Por favor, preencha nome, telefone e destino.';
+        status.className = 'form-status';
+        return;
+      }
+      status.textContent = 'Recebemos seu roteiro! Nossa equipe vai analisar os detalhes e retornar com uma proposta personalizada. (formulário de demonstração)';
+      status.className = 'form-status sucesso';
+      formCompleto.reset();
+    });
+  }
+
+  var formToggleButtons = document.querySelectorAll('[data-form-toggle]');
+  formToggleButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var alvo = btn.getAttribute('data-form-toggle');
+      formToggleButtons.forEach(function (b) {
+        b.classList.toggle('ativo', b === btn);
+        b.classList.toggle('btn-primary', b === btn);
+      });
+      document.querySelectorAll('[data-form]').forEach(function (f) {
+        f.hidden = f.getAttribute('data-form') !== alvo;
+      });
+    });
+  });
 
   document.querySelectorAll('#ano').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
