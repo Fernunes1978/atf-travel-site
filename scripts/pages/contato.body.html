@@ -310,5 +310,12 @@
       });
     });
   });
+
+  var verticalParam = new URLSearchParams(window.location.search).get('vertical');
+  if (verticalParam) {
+    document.querySelectorAll('select[name="vertical"]').forEach(function (sel) {
+      sel.value = verticalParam;
+    });
+  }
 })();
 </script>

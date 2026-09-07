@@ -24,6 +24,15 @@
         <li><a href="/" class="nav-link">Início</a></li>
         <li><a href="/sobre/" class="nav-link">Sobre</a></li>
         <li class="has-dropdown">
+          <a href="/areas/" class="nav-link">Áreas</a>
+          <div class="dropdown">
+            <a href="/areas/luxury-gastronomy/">Luxury &amp; Gastronomy</a>
+            <a href="/areas/snow-trip/">Snow Trip</a>
+            <a href="/areas/sports/">Sports</a>
+            <a href="/areas/corporate/">Corporate</a>
+          </div>
+        </li>
+        <li class="has-dropdown">
           <a href="/servicos/" class="nav-link">Serviços</a>
           <div class="dropdown">
             <a href="/servicos/viagens-de-luxo/">Viagens de luxo</a>
@@ -361,6 +370,13 @@
       });
     });
   });
+
+  var verticalParam = new URLSearchParams(window.location.search).get('vertical');
+  if (verticalParam) {
+    document.querySelectorAll('select[name="vertical"]').forEach(function (sel) {
+      sel.value = verticalParam;
+    });
+  }
 })();
 </script>
 <footer class="site-footer">
