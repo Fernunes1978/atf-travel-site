@@ -1,0 +1,321 @@
+<nav class="breadcrumbs container" aria-label="Breadcrumb">
+  <a href="/">Início</a><span class="sep">/</span><span class="atual">Contato</span>
+</nav>
+
+
+  <section class="hero" style="padding-top:90px; padding-bottom:50px;">
+    <div class="container">
+      <span class="eyebrow">Fale Conosco</span>
+      <h1>Vamos planejar sua viagem</h1>
+      <p class="lead">Conte um pouco sobre o que você procura e nossa equipe retorna com uma proposta sob medida.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container duas-colunas" style="align-items:flex-start;">
+
+      <div class="form-toggle">
+        <button type="button" class="btn btn-primary ativo" data-form-toggle="simples">Formulário rápido</button>
+        <button type="button" class="btn" data-form-toggle="completo">Roteiro personalizado (completo)</button>
+      </div>
+
+      <form id="form-contato" data-form="simples" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Novo contato (formulário rápido) - Site ATF Travel">
+        <input type="hidden" name="formulario" value="Rápido">
+        <div class="form-grid">
+          <div class="campo">
+            <label for="nome">Nome*</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">Telefone / WhatsApp*</label>
+            <input type="tel" id="telefone" name="telefone" required>
+          </div>
+          <div class="campo full">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="campo full">
+            <label for="vertical">Vertical de interesse</label>
+            <select id="vertical" name="vertical">
+              <option value="">Selecione (opcional)</option>
+              <option value="ATF Travel">ATF Travel</option>
+              <option value="Luxury & Gastronomy">Luxury &amp; Gastronomy</option>
+              <option value="Snow Trip">Snow Trip</option>
+              <option value="Sports">Sports</option>
+              <option value="Corporate">Corporate</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="mensagem">Conte sobre a viagem que você tem em mente*</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Enviar solicitação</button>
+        <p id="form-status" class="form-status"></p>
+      </form>
+
+      <form id="form-contato-completo" data-form="completo" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate hidden>
+        <input type="hidden" name="_subject" value="Novo roteiro personalizado - Site ATF Travel">
+        <input type="hidden" name="formulario" value="Completo">
+        <p class="form-hint">Quanto mais detalhes você nos der, mais preciso será o roteiro que vamos preparar.</p>
+        <div class="form-grid">
+          <div class="campo">
+            <label for="c-nome">Nome*</label>
+            <input type="text" id="c-nome" name="nome" required>
+          </div>
+          <div class="campo">
+            <label for="c-telefone">Telefone / WhatsApp*</label>
+            <input type="tel" id="c-telefone" name="telefone" required>
+          </div>
+          <div class="campo full">
+            <label for="c-email">E-mail</label>
+            <input type="email" id="c-email" name="email">
+          </div>
+          <div class="campo full">
+            <label for="c-vertical">Vertical de interesse</label>
+            <select id="c-vertical" name="vertical">
+              <option value="">Selecione (opcional)</option>
+              <option value="ATF Travel">ATF Travel</option>
+              <option value="Luxury & Gastronomy">Luxury &amp; Gastronomy</option>
+              <option value="Snow Trip">Snow Trip</option>
+              <option value="Sports">Sports</option>
+              <option value="Corporate">Corporate</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="c-destino">Destino(s) desejado(s)*</label>
+            <input type="text" id="c-destino" name="destino" placeholder="Ex: Patagônia, Europa, Caribe..." required>
+          </div>
+          <div class="campo">
+            <label for="c-data-ida">Data de ida (ou previsão)</label>
+            <input type="text" id="c-data-ida" name="data_ida" placeholder="Ex: 15/12/2026 ou 'ainda não defini'">
+          </div>
+          <div class="campo">
+            <label for="c-duracao">Duração aproximada</label>
+            <input type="text" id="c-duracao" name="duracao" placeholder="Ex: 10 dias">
+          </div>
+          <div class="campo">
+            <label for="c-adultos">Nº de adultos</label>
+            <input type="number" id="c-adultos" name="adultos" min="1" placeholder="Ex: 2">
+          </div>
+          <div class="campo">
+            <label for="c-criancas">Nº de crianças</label>
+            <input type="number" id="c-criancas" name="criancas" min="0" placeholder="Ex: 0">
+          </div>
+          <div class="campo full">
+            <label for="c-orcamento">Faixa de orçamento estimada (por pessoa)</label>
+            <select id="c-orcamento" name="orcamento">
+              <option value="">Selecione (opcional)</option>
+              <option value="Até R$ 5.000">Até R$ 5.000</option>
+              <option value="R$ 5.000 a R$ 15.000">R$ 5.000 a R$ 15.000</option>
+              <option value="R$ 15.000 a R$ 30.000">R$ 15.000 a R$ 30.000</option>
+              <option value="Acima de R$ 30.000">Acima de R$ 30.000</option>
+              <option value="Prefiro conversar com um especialista">Prefiro conversar com um especialista</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label for="c-hospedagem">Categoria de hospedagem preferida</label>
+            <select id="c-hospedagem" name="hospedagem">
+              <option value="">Selecione (opcional)</option>
+              <option value="Conforto">Conforto</option>
+              <option value="Luxo">Luxo</option>
+              <option value="Ultra luxo">Ultra luxo</option>
+              <option value="Sem preferência">Sem preferência</option>
+            </select>
+          </div>
+          <div class="campo full">
+            <label>Interesses para essa viagem</label>
+            <div class="campo-checks">
+              <label><input type="checkbox" name="interesses" value="Gastronomia"> Gastronomia</label>
+              <label><input type="checkbox" name="interesses" value="Neve e esqui"> Neve e esqui</label>
+              <label><input type="checkbox" name="interesses" value="Aventura e esportes"> Aventura e esportes</label>
+              <label><input type="checkbox" name="interesses" value="Cultura e história"> Cultura e história</label>
+              <label><input type="checkbox" name="interesses" value="Praia e relax"> Praia e relax</label>
+              <label><input type="checkbox" name="interesses" value="Viagem corporativa"> Viagem corporativa</label>
+            </div>
+          </div>
+          <div class="campo full">
+            <label for="c-mensagem">Observações adicionais</label>
+            <textarea id="c-mensagem" name="mensagem" rows="4" placeholder="Preferências, restrições, ocasião especial, etc."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Enviar roteiro para orçamento</button>
+        <p id="form-completo-status" class="form-status"></p>
+      </form>
+
+      <div class="contato-info-card">
+        <h3>Outros canais</h3>
+        <div class="contato-info-item">
+          <div>
+            <strong>WhatsApp</strong>
+            (19) 99811-7815
+          </div>
+        </div>
+        <div class="contato-info-item">
+          <div>
+            <strong>E-mail</strong>
+            contato@annestour.com.br
+          </div>
+        </div>
+        <div class="contato-info-item">
+          <div>
+            <strong>Atendimento</strong>
+            100% online e personalizado, atendemos toda a região de Campinas / SP
+          </div>
+        </div>
+        <div class="contato-info-item">
+          <div>
+            <strong>Horário de atendimento</strong>
+            Segunda a sexta, 9h às 18h
+          </div>
+        </div>
+        <a href="https://wa.me/5519998117815" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:8px;">Falar no WhatsApp</a>
+        <div class="social-links">
+          <a href="https://www.instagram.com/atf.annestour/" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/atgrouptravel/" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2c1-1.5 2.5-2.3 4.5-2.3 3 0 5.5 2 5.5 6V21h-4v-5.5c0-1.8-.7-3-2.3-3-1.3 0-2.2.9-2.5 1.8-.1.3-.2.7-.2 1.1V21h-4z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<script>
+(function () {
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xrpgawrj';
+  var WHATSAPP_NUMERO = '5519998117815';
+
+  function enviarFormulario(config) {
+    var form = document.getElementById(config.formId);
+    if (!form) return;
+    var status = document.getElementById(config.statusId);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var valores = {};
+      config.campos.forEach(function (c) {
+        valores[c.name] = (form[c.name] && form[c.name].value ? form[c.name].value : '').trim();
+      });
+
+      var faltando = config.obrigatorios.filter(function (campo) { return !valores[campo]; });
+      if (faltando.length) {
+        status.textContent = 'Por favor, preencha ' + config.obrigatoriosLabel + '.';
+        status.className = 'form-status';
+        return;
+      }
+
+      var interesses = form.querySelectorAll('input[name="interesses"]:checked');
+      var interessesTexto = Array.prototype.map.call(interesses, function (el) { return el.value; }).join(', ');
+
+      var botaoEnviar = form.querySelector('button[type="submit"]');
+      var textoOriginal = botaoEnviar.textContent;
+      botaoEnviar.disabled = true;
+      botaoEnviar.textContent = 'Enviando...';
+
+      fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function (response) {
+        botaoEnviar.disabled = false;
+        botaoEnviar.textContent = textoOriginal;
+        if (response.ok) {
+          status.innerHTML = config.mensagemSucesso;
+          status.className = 'form-status sucesso';
+
+          var whatsappTexto = config.montarMensagemWhatsapp(valores, interessesTexto);
+          var linkWhatsapp = document.createElement('a');
+          linkWhatsapp.href = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(whatsappTexto);
+          linkWhatsapp.target = '_blank';
+          linkWhatsapp.rel = 'noopener';
+          linkWhatsapp.className = 'btn btn-whatsapp';
+          linkWhatsapp.style.marginTop = '14px';
+          linkWhatsapp.style.display = 'inline-flex';
+          linkWhatsapp.textContent = 'Confirmar também por WhatsApp';
+          status.appendChild(document.createElement('br'));
+          status.appendChild(linkWhatsapp);
+
+          form.reset();
+        } else {
+          status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+          status.className = 'form-status';
+        }
+      }).catch(function () {
+        botaoEnviar.disabled = false;
+        botaoEnviar.textContent = textoOriginal;
+        status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+        status.className = 'form-status';
+      });
+    });
+  }
+
+  enviarFormulario({
+    formId: 'form-contato',
+    statusId: 'form-status',
+    campos: [
+      { name: 'nome' }, { name: 'telefone' }, { name: 'email' },
+      { name: 'vertical' }, { name: 'mensagem' }
+    ],
+    obrigatorios: ['nome', 'telefone', 'mensagem'],
+    obrigatoriosLabel: 'nome, telefone e mensagem',
+    mensagemSucesso: 'Recebemos sua solicitação! Em breve nossa equipe entra em contato.',
+    montarMensagemWhatsapp: function (v) {
+      return 'Olá! Meu nome é ' + v.nome + '.\n' +
+        (v.vertical ? 'Vertical de interesse: ' + v.vertical + '\n' : '') +
+        'Mensagem: ' + v.mensagem;
+    }
+  });
+
+  enviarFormulario({
+    formId: 'form-contato-completo',
+    statusId: 'form-completo-status',
+    campos: [
+      { name: 'nome' }, { name: 'telefone' }, { name: 'email' }, { name: 'vertical' },
+      { name: 'destino' }, { name: 'data_ida' }, { name: 'duracao' },
+      { name: 'adultos' }, { name: 'criancas' }, { name: 'orcamento' },
+      { name: 'hospedagem' }, { name: 'mensagem' }
+    ],
+    obrigatorios: ['nome', 'telefone', 'destino'],
+    obrigatoriosLabel: 'nome, telefone e destino',
+    mensagemSucesso: 'Recebemos seu roteiro! Nossa equipe vai analisar os detalhes e retornar com uma proposta personalizada.',
+    montarMensagemWhatsapp: function (v, interesses) {
+      return 'Olá! Meu nome é ' + v.nome + ' e quero montar um roteiro personalizado.\n' +
+        'Destino: ' + v.destino + '\n' +
+        (v.data_ida ? 'Data de ida: ' + v.data_ida + '\n' : '') +
+        (v.duracao ? 'Duração: ' + v.duracao + '\n' : '') +
+        (v.adultos ? 'Adultos: ' + v.adultos + ' ' : '') +
+        (v.criancas ? 'Crianças: ' + v.criancas + '\n' : '\n') +
+        (v.orcamento ? 'Orçamento: ' + v.orcamento + '\n' : '') +
+        (v.hospedagem ? 'Hospedagem preferida: ' + v.hospedagem + '\n' : '') +
+        (interesses ? 'Interesses: ' + interesses + '\n' : '') +
+        (v.mensagem ? 'Observações: ' + v.mensagem : '');
+    }
+  });
+
+  var formToggleButtons = document.querySelectorAll('[data-form-toggle]');
+  formToggleButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var alvo = btn.getAttribute('data-form-toggle');
+      formToggleButtons.forEach(function (b) {
+        b.classList.toggle('ativo', b === btn);
+        b.classList.toggle('btn-primary', b === btn);
+      });
+      document.querySelectorAll('[data-form]').forEach(function (f) {
+        f.hidden = f.getAttribute('data-form') !== alvo;
+      });
+    });
+  });
+
+  var verticalParam = new URLSearchParams(window.location.search).get('vertical');
+  if (verticalParam) {
+    document.querySelectorAll('select[name="vertical"]').forEach(function (sel) {
+      sel.value = verticalParam;
+    });
+  }
+})();
+</script>
