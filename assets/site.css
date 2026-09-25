@@ -761,3 +761,13 @@ a { color: inherit; text-decoration: none; }
 }
 .relacionado-item a { font-family: var(--fonte-display); font-size: 1.1rem; font-weight: 600; }
 .relacionado-item a:hover { color: var(--dourado-terroso); }
+
+/* ---------- Language switch ---------- */
+.lang-switch a {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border: 1px solid var(--borda);
+  border-radius: 3px;
+}
+.lang-switch a:hover { border-color: var(--dourado-terroso); color: var(--dourado-terroso); }
