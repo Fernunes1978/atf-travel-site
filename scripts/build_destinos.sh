@@ -5,17 +5,17 @@ cd "C:\Users\fernu\Desktop\site-institucional"
 bash scripts/make_page.sh "destinos/index.html" \
   "Destinos | ATF Travel" \
   "Conheça os destinos com curadoria ATF Travel: neve, praia e ilhas, e Europa. Roteiros de luxo em Maldivas, Vail, Courchevel, Tulum e muito mais." \
-  "/destinos/" "scripts/pages/destinos-index.body.html"
+  "/destinos/" "scripts/pages/destinos-index.body.html" "pt" "/en/destinations/"
 
 bash scripts/make_page.sh "destinos/europa/index.html" \
   "Viagens para a Europa | ATF Travel" \
   "Roteiros de luxo pela Europa: enoturismo em Portugal e França, cultura na Turquia e neve em Andorra, Baqueira Beret e Courchevel." \
-  "/destinos/europa/" "scripts/pages/destinos-europa.body.html"
+  "/destinos/europa/" "scripts/pages/destinos-europa.body.html" "pt" "/en/destinations/europe/"
 
 bash scripts/make_page.sh "destinos/caribe/index.html" \
   "Viagens para o Caribe | ATF Travel" \
   "Resorts de luxo no Caribe e no México: Los Cabos, Tulum, Xcaret, Jamaica (Sandals) e Curaçao, com curadoria ATF Travel." \
-  "/destinos/caribe/" "scripts/pages/destinos-caribe.body.html"
+  "/destinos/caribe/" "scripts/pages/destinos-caribe.body.html" "pt" "/en/destinations/caribbean/"
 
 declare -A TITULOS=(
   [maldivas]="Maldivas | Viagem de Luxo | ATF Travel"
@@ -53,12 +53,31 @@ declare -A DESCS=(
   [franca]="Roteiros de enoturismo e alta gastronomia pela França, com curadoria da ATF Travel."
 )
 
+declare -A EN_SLUG=(
+  [maldivas]="maldives"
+  [alentejo-portugal]="alentejo-portugal"
+  [los-cabos]="los-cabos"
+  [tulum]="tulum"
+  [turquia]="turkey"
+  [aspen-snowmass]="aspen-snowmass"
+  [vail]="vail"
+  [termas-de-chillan]="termas-de-chillan"
+  [xcaret]="xcaret"
+  [andorra]="andorra"
+  [baqueira-beret]="baqueira-beret"
+  [courchevel]="courchevel"
+  [jamaica-sandals]="jamaica-sandals"
+  [curacao]="curacao"
+  [franca]="france"
+)
+
 for slug in "${!TITULOS[@]}"; do
   bash scripts/make_page.sh "destinos/${slug}/index.html" \
     "${TITULOS[$slug]}" \
     "${DESCS[$slug]}" \
     "/destinos/${slug}/" \
-    "scripts/pages/destino-${slug}.body.html"
+    "scripts/pages/destino-${slug}.body.html" \
+    "pt" "/en/destinations/${EN_SLUG[$slug]}/"
 done
 
 echo "Destinos: build completo."
