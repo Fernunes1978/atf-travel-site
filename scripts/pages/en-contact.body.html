@@ -1,13 +1,12 @@
 <nav class="breadcrumbs container" aria-label="Breadcrumb">
-  <a href="/">Início</a><span class="sep">/</span><span class="atual">Contato</span>
+  <a href="/en/">Home</a><span class="sep">/</span><span class="atual">Contact</span>
 </nav>
-
 
   <section class="hero" style="padding-top:90px; padding-bottom:50px;">
     <div class="container">
-      <span class="eyebrow">Fale Conosco</span>
-      <h1>Vamos planejar sua viagem</h1>
-      <p class="lead">Conte um pouco sobre o que você procura e nossa equipe retorna com uma proposta sob medida.</p>
+      <span class="eyebrow">Get in Touch</span>
+      <h1>Let's plan your trip</h1>
+      <p class="lead">Tell us a bit about what you're looking for and our team will get back to you with a tailor-made proposal.</p>
     </div>
   </section>
 
@@ -15,30 +14,30 @@
     <div class="container duas-colunas" style="align-items:flex-start;">
 
       <div class="form-toggle">
-        <button type="button" class="btn btn-primary ativo" data-form-toggle="simples">Formulário rápido</button>
-        <button type="button" class="btn" data-form-toggle="completo">Roteiro personalizado (completo)</button>
+        <button type="button" class="btn btn-primary ativo" data-form-toggle="simples">Quick form</button>
+        <button type="button" class="btn" data-form-toggle="completo">Custom itinerary (full form)</button>
       </div>
 
       <form id="form-contato" data-form="simples" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="Novo contato (formulário rápido) - Site ATF Travel">
-        <input type="hidden" name="formulario" value="Rápido">
+        <input type="hidden" name="_subject" value="New contact (quick form) - ATF Travel EN site">
+        <input type="hidden" name="formulario" value="Quick (EN)">
         <div class="form-grid">
           <div class="campo">
-            <label for="nome">Nome*</label>
+            <label for="nome">Name*</label>
             <input type="text" id="nome" name="nome" required>
           </div>
           <div class="campo">
-            <label for="telefone">Telefone / WhatsApp*</label>
+            <label for="telefone">Phone / WhatsApp*</label>
             <input type="tel" id="telefone" name="telefone" required>
           </div>
           <div class="campo full">
-            <label for="email">E-mail</label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email">
           </div>
           <div class="campo full">
-            <label for="vertical">Vertical de interesse</label>
-            <select id="vertical" name="vertical">
-              <option value="">Selecione (opcional)</option>
+            <label for="division">Division of interest</label>
+            <select id="division" name="division">
+              <option value="">Select (optional)</option>
               <option value="Luxury & Gastronomy">Luxury &amp; Gastronomy</option>
               <option value="Snow Trip">Snow Trip</option>
               <option value="Sports">Sports</option>
@@ -46,35 +45,35 @@
             </select>
           </div>
           <div class="campo full">
-            <label for="mensagem">Conte sobre a viagem que você tem em mente*</label>
+            <label for="mensagem">Tell us about the trip you have in mind*</label>
             <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Enviar solicitação</button>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Send request</button>
         <p id="form-status" class="form-status"></p>
       </form>
 
       <form id="form-contato-completo" data-form="completo" action="https://formspree.io/f/xrpgawrj" method="POST" novalidate hidden>
-        <input type="hidden" name="_subject" value="Novo roteiro personalizado - Site ATF Travel">
-        <input type="hidden" name="formulario" value="Completo">
-        <p class="form-hint">Quanto mais detalhes você nos der, mais preciso será o roteiro que vamos preparar.</p>
+        <input type="hidden" name="_subject" value="New custom itinerary - ATF Travel EN site">
+        <input type="hidden" name="formulario" value="Full (EN)">
+        <p class="form-hint">The more detail you give us, the more precise the itinerary we prepare will be.</p>
         <div class="form-grid">
           <div class="campo">
-            <label for="c-nome">Nome*</label>
+            <label for="c-nome">Name*</label>
             <input type="text" id="c-nome" name="nome" required>
           </div>
           <div class="campo">
-            <label for="c-telefone">Telefone / WhatsApp*</label>
+            <label for="c-telefone">Phone / WhatsApp*</label>
             <input type="tel" id="c-telefone" name="telefone" required>
           </div>
           <div class="campo full">
-            <label for="c-email">E-mail</label>
+            <label for="c-email">Email</label>
             <input type="email" id="c-email" name="email">
           </div>
           <div class="campo full">
-            <label for="c-vertical">Vertical de interesse</label>
-            <select id="c-vertical" name="vertical">
-              <option value="">Selecione (opcional)</option>
+            <label for="c-division">Division of interest</label>
+            <select id="c-division" name="division">
+              <option value="">Select (optional)</option>
               <option value="Luxury & Gastronomy">Luxury &amp; Gastronomy</option>
               <option value="Snow Trip">Snow Trip</option>
               <option value="Sports">Sports</option>
@@ -82,93 +81,93 @@
             </select>
           </div>
           <div class="campo full">
-            <label for="c-destino">Destino(s) desejado(s)*</label>
-            <input type="text" id="c-destino" name="destino" placeholder="Ex: Patagônia, Europa, Caribe..." required>
+            <label for="c-destino">Desired destination(s)*</label>
+            <input type="text" id="c-destino" name="destino" placeholder="E.g.: Patagonia, Europe, Caribbean..." required>
           </div>
           <div class="campo">
-            <label for="c-data-ida">Data de ida (ou previsão)</label>
-            <input type="text" id="c-data-ida" name="data_ida" placeholder="Ex: 15/12/2026 ou 'ainda não defini'">
+            <label for="c-data-ida">Departure date (or estimate)</label>
+            <input type="text" id="c-data-ida" name="data_ida" placeholder="E.g.: 12/15/2026 or 'not decided yet'">
           </div>
           <div class="campo">
-            <label for="c-duracao">Duração aproximada</label>
-            <input type="text" id="c-duracao" name="duracao" placeholder="Ex: 10 dias">
+            <label for="c-duracao">Approximate length</label>
+            <input type="text" id="c-duracao" name="duracao" placeholder="E.g.: 10 days">
           </div>
           <div class="campo">
-            <label for="c-adultos">Nº de adultos</label>
-            <input type="number" id="c-adultos" name="adultos" min="1" placeholder="Ex: 2">
+            <label for="c-adultos">Number of adults</label>
+            <input type="number" id="c-adultos" name="adultos" min="1" placeholder="E.g.: 2">
           </div>
           <div class="campo">
-            <label for="c-criancas">Nº de crianças</label>
-            <input type="number" id="c-criancas" name="criancas" min="0" placeholder="Ex: 0">
+            <label for="c-criancas">Number of children</label>
+            <input type="number" id="c-criancas" name="criancas" min="0" placeholder="E.g.: 0">
           </div>
           <div class="campo full">
-            <label for="c-orcamento">Faixa de orçamento estimada (por pessoa)</label>
+            <label for="c-orcamento">Estimated budget range (per person)</label>
             <select id="c-orcamento" name="orcamento">
-              <option value="">Selecione (opcional)</option>
-              <option value="Até R$ 5.000">Até R$ 5.000</option>
-              <option value="R$ 5.000 a R$ 15.000">R$ 5.000 a R$ 15.000</option>
-              <option value="R$ 15.000 a R$ 30.000">R$ 15.000 a R$ 30.000</option>
-              <option value="Acima de R$ 30.000">Acima de R$ 30.000</option>
-              <option value="Prefiro conversar com um especialista">Prefiro conversar com um especialista</option>
+              <option value="">Select (optional)</option>
+              <option value="Up to $1,000">Up to $1,000</option>
+              <option value="$1,000 to $3,000">$1,000 to $3,000</option>
+              <option value="$3,000 to $6,000">$3,000 to $6,000</option>
+              <option value="Above $6,000">Above $6,000</option>
+              <option value="I'd rather talk to a specialist">I'd rather talk to a specialist</option>
             </select>
           </div>
           <div class="campo full">
-            <label for="c-hospedagem">Categoria de hospedagem preferida</label>
+            <label for="c-hospedagem">Preferred lodging category</label>
             <select id="c-hospedagem" name="hospedagem">
-              <option value="">Selecione (opcional)</option>
-              <option value="Conforto">Conforto</option>
-              <option value="Luxo">Luxo</option>
-              <option value="Ultra luxo">Ultra luxo</option>
-              <option value="Sem preferência">Sem preferência</option>
+              <option value="">Select (optional)</option>
+              <option value="Comfort">Comfort</option>
+              <option value="Luxury">Luxury</option>
+              <option value="Ultra luxury">Ultra luxury</option>
+              <option value="No preference">No preference</option>
             </select>
           </div>
           <div class="campo full">
-            <label>Interesses para essa viagem</label>
+            <label>Interests for this trip</label>
             <div class="campo-checks">
-              <label><input type="checkbox" name="interesses" value="Gastronomia"> Gastronomia</label>
-              <label><input type="checkbox" name="interesses" value="Neve e esqui"> Neve e esqui</label>
-              <label><input type="checkbox" name="interesses" value="Aventura e esportes"> Aventura e esportes</label>
-              <label><input type="checkbox" name="interesses" value="Cultura e história"> Cultura e história</label>
-              <label><input type="checkbox" name="interesses" value="Praia e relax"> Praia e relax</label>
-              <label><input type="checkbox" name="interesses" value="Viagem corporativa"> Viagem corporativa</label>
+              <label><input type="checkbox" name="interesses" value="Gastronomy"> Gastronomy</label>
+              <label><input type="checkbox" name="interesses" value="Snow and skiing"> Snow and skiing</label>
+              <label><input type="checkbox" name="interesses" value="Adventure and sports"> Adventure and sports</label>
+              <label><input type="checkbox" name="interesses" value="Culture and history"> Culture and history</label>
+              <label><input type="checkbox" name="interesses" value="Beach and relaxation"> Beach and relaxation</label>
+              <label><input type="checkbox" name="interesses" value="Corporate travel"> Corporate travel</label>
             </div>
           </div>
           <div class="campo full">
-            <label for="c-mensagem">Observações adicionais</label>
-            <textarea id="c-mensagem" name="mensagem" rows="4" placeholder="Preferências, restrições, ocasião especial, etc."></textarea>
+            <label for="c-mensagem">Additional notes</label>
+            <textarea id="c-mensagem" name="mensagem" rows="4" placeholder="Preferences, restrictions, special occasion, etc."></textarea>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Enviar roteiro para orçamento</button>
+        <button type="submit" class="btn btn-primary" style="margin-top:20px;">Send itinerary for a quote</button>
         <p id="form-completo-status" class="form-status"></p>
       </form>
 
       <div class="contato-info-card">
-        <h3>Outros canais</h3>
+        <h3>Other channels</h3>
         <div class="contato-info-item">
           <div>
             <strong>WhatsApp</strong>
-            (19) 99811-7815
+            +55 (19) 99811-7815
           </div>
         </div>
         <div class="contato-info-item">
           <div>
-            <strong>E-mail</strong>
+            <strong>Email</strong>
             contato@annestour.com.br
           </div>
         </div>
         <div class="contato-info-item">
           <div>
-            <strong>Atendimento</strong>
-            100% online e personalizado, atendemos toda a região de Campinas / SP
+            <strong>Service</strong>
+            100% online and personalized, serving clients worldwide
           </div>
         </div>
         <div class="contato-info-item">
           <div>
-            <strong>Horário de atendimento</strong>
-            Segunda a sexta, 9h às 18h
+            <strong>Business hours</strong>
+            Monday to Friday, 9am to 6pm (Brasília time)
           </div>
         </div>
-        <a href="https://wa.me/5519998117815" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:8px;">Falar no WhatsApp</a>
+        <a href="https://wa.me/5519998117815" target="_blank" rel="noopener" class="btn btn-whatsapp" style="width:100%; justify-content:center; margin-top:8px;">Chat on WhatsApp</a>
         <div class="social-links">
           <a href="https://www.instagram.com/atf.annestour/" aria-label="Instagram" target="_blank" rel="noopener">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
@@ -202,7 +201,7 @@
 
       var faltando = config.obrigatorios.filter(function (campo) { return !valores[campo]; });
       if (faltando.length) {
-        status.textContent = 'Por favor, preencha ' + config.obrigatoriosLabel + '.';
+        status.textContent = 'Please fill in ' + config.obrigatoriosLabel + '.';
         status.className = 'form-status';
         return;
       }
@@ -213,7 +212,7 @@
       var botaoEnviar = form.querySelector('button[type="submit"]');
       var textoOriginal = botaoEnviar.textContent;
       botaoEnviar.disabled = true;
-      botaoEnviar.textContent = 'Enviando...';
+      botaoEnviar.textContent = 'Sending...';
 
       fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
@@ -234,19 +233,19 @@
           linkWhatsapp.className = 'btn btn-whatsapp';
           linkWhatsapp.style.marginTop = '14px';
           linkWhatsapp.style.display = 'inline-flex';
-          linkWhatsapp.textContent = 'Confirmar também por WhatsApp';
+          linkWhatsapp.textContent = 'Also confirm via WhatsApp';
           status.appendChild(document.createElement('br'));
           status.appendChild(linkWhatsapp);
 
           form.reset();
         } else {
-          status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+          status.textContent = 'Could not send right now. Please try again or reach out on WhatsApp.';
           status.className = 'form-status';
         }
       }).catch(function () {
         botaoEnviar.disabled = false;
         botaoEnviar.textContent = textoOriginal;
-        status.textContent = 'Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.';
+        status.textContent = 'Could not send right now. Please try again or reach out on WhatsApp.';
         status.className = 'form-status';
       });
     });
@@ -257,15 +256,15 @@
     statusId: 'form-status',
     campos: [
       { name: 'nome' }, { name: 'telefone' }, { name: 'email' },
-      { name: 'vertical' }, { name: 'mensagem' }
+      { name: 'division' }, { name: 'mensagem' }
     ],
     obrigatorios: ['nome', 'telefone', 'mensagem'],
-    obrigatoriosLabel: 'nome, telefone e mensagem',
-    mensagemSucesso: 'Recebemos sua solicitação! Em breve nossa equipe entra em contato.',
+    obrigatoriosLabel: 'name, phone and message',
+    mensagemSucesso: 'We received your request! Our team will be in touch shortly.',
     montarMensagemWhatsapp: function (v) {
-      return 'Olá! Meu nome é ' + v.nome + '.\n' +
-        (v.vertical ? 'Vertical de interesse: ' + v.vertical + '\n' : '') +
-        'Mensagem: ' + v.mensagem;
+      return 'Hi! My name is ' + v.nome + '.\n' +
+        (v.division ? 'Division of interest: ' + v.division + '\n' : '') +
+        'Message: ' + v.mensagem;
     }
   });
 
@@ -273,25 +272,25 @@
     formId: 'form-contato-completo',
     statusId: 'form-completo-status',
     campos: [
-      { name: 'nome' }, { name: 'telefone' }, { name: 'email' }, { name: 'vertical' },
+      { name: 'nome' }, { name: 'telefone' }, { name: 'email' }, { name: 'division' },
       { name: 'destino' }, { name: 'data_ida' }, { name: 'duracao' },
       { name: 'adultos' }, { name: 'criancas' }, { name: 'orcamento' },
       { name: 'hospedagem' }, { name: 'mensagem' }
     ],
     obrigatorios: ['nome', 'telefone', 'destino'],
-    obrigatoriosLabel: 'nome, telefone e destino',
-    mensagemSucesso: 'Recebemos seu roteiro! Nossa equipe vai analisar os detalhes e retornar com uma proposta personalizada.',
+    obrigatoriosLabel: 'name, phone and destination',
+    mensagemSucesso: 'We received your itinerary! Our team will review the details and get back with a personalized proposal.',
     montarMensagemWhatsapp: function (v, interesses) {
-      return 'Olá! Meu nome é ' + v.nome + ' e quero montar um roteiro personalizado.\n' +
-        'Destino: ' + v.destino + '\n' +
-        (v.data_ida ? 'Data de ida: ' + v.data_ida + '\n' : '') +
-        (v.duracao ? 'Duração: ' + v.duracao + '\n' : '') +
-        (v.adultos ? 'Adultos: ' + v.adultos + ' ' : '') +
-        (v.criancas ? 'Crianças: ' + v.criancas + '\n' : '\n') +
-        (v.orcamento ? 'Orçamento: ' + v.orcamento + '\n' : '') +
-        (v.hospedagem ? 'Hospedagem preferida: ' + v.hospedagem + '\n' : '') +
-        (interesses ? 'Interesses: ' + interesses + '\n' : '') +
-        (v.mensagem ? 'Observações: ' + v.mensagem : '');
+      return 'Hi! My name is ' + v.nome + ' and I want to build a custom itinerary.\n' +
+        'Destination: ' + v.destino + '\n' +
+        (v.data_ida ? 'Departure date: ' + v.data_ida + '\n' : '') +
+        (v.duracao ? 'Duration: ' + v.duracao + '\n' : '') +
+        (v.adultos ? 'Adults: ' + v.adultos + ' ' : '') +
+        (v.criancas ? 'Children: ' + v.criancas + '\n' : '\n') +
+        (v.orcamento ? 'Budget: ' + v.orcamento + '\n' : '') +
+        (v.hospedagem ? 'Preferred lodging: ' + v.hospedagem + '\n' : '') +
+        (interesses ? 'Interests: ' + interesses + '\n' : '') +
+        (v.mensagem ? 'Notes: ' + v.mensagem : '');
     }
   });
 
@@ -309,10 +308,10 @@
     });
   });
 
-  var verticalParam = new URLSearchParams(window.location.search).get('vertical');
-  if (verticalParam) {
-    document.querySelectorAll('select[name="vertical"]').forEach(function (sel) {
-      sel.value = verticalParam;
+  var divisionParam = new URLSearchParams(window.location.search).get('division');
+  if (divisionParam) {
+    document.querySelectorAll('select[name="division"]').forEach(function (sel) {
+      sel.value = divisionParam;
     });
   }
 })();
