@@ -696,6 +696,20 @@ a { color: inherit; text-decoration: none; }
 }
 .demo-banner strong { color: var(--dourado-terroso); }
 .page[hidden] { display: none; }
+li.lang-switch a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+}
+li.lang-switch a.nav-link svg { display: block; width: 100%; height: 100%; }
+li.lang-switch a.nav-link:hover { border-color: var(--dourado-terroso); transform: scale(1.08); }
+li.lang-switch a.nav-link::after { display: none; }
 </style>
 
 <header class="site-header">
