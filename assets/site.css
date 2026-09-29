@@ -764,10 +764,15 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Language switch ---------- */
 .lang-switch a {
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0;
   border: 1px solid var(--borda);
-  border-radius: 3px;
+  border-radius: 50%;
 }
-.lang-switch a:hover { border-color: var(--dourado-terroso); color: var(--dourado-terroso); }
+.lang-switch a:hover { border-color: var(--dourado-terroso); transform: scale(1.08); }

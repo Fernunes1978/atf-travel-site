@@ -17,14 +17,14 @@ if [ "$LANG" = "en" ]; then
   HTML_LANG="en"
   HEADER_FILE="$ROOT/scripts/_header_en.html"
   FOOTER_FILE="$ROOT/scripts/_footer_en.html"
-  ALT_LABEL="🇧🇷 Português"
+  ALT_LABEL="🇧🇷"
   ALT_HREFLANG="pt-BR"
   THIS_HREFLANG="en"
 else
   HTML_LANG="pt-BR"
   HEADER_FILE="$ROOT/scripts/_header.html"
   FOOTER_FILE="$ROOT/scripts/_footer.html"
-  ALT_LABEL="🇬🇧 English"
+  ALT_LABEL="🇬🇧"
   ALT_HREFLANG="en"
   THIS_HREFLANG="pt-BR"
 fi
