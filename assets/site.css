@@ -763,11 +763,17 @@ a { color: inherit; text-decoration: none; }
 .relacionado-item a:hover { color: var(--dourado-terroso); }
 
 /* ---------- Language switch ---------- */
-.lang-switch a {
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  padding: 4px 10px;
+li.lang-switch a.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  overflow: hidden;
   border: 1px solid var(--borda);
-  border-radius: 3px;
+  border-radius: 50%;
 }
-.lang-switch a:hover { border-color: var(--dourado-terroso); color: var(--dourado-terroso); }
+li.lang-switch a.nav-link svg { display: block; width: 100%; height: 100%; }
+li.lang-switch a.nav-link:hover { border-color: var(--dourado-terroso); transform: scale(1.08); }
+li.lang-switch a.nav-link::after { display: none; }

@@ -17,14 +17,14 @@ if [ "$LANG" = "en" ]; then
   HTML_LANG="en"
   HEADER_FILE="$ROOT/scripts/_header_en.html"
   FOOTER_FILE="$ROOT/scripts/_footer_en.html"
-  ALT_LABEL="🇧🇷 Português"
+  ALT_LABEL='<svg viewBox="0 0 60 42" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="60" height="42" fill="#009c3b"/><polygon points="30,4 56,21 30,38 4,21" fill="#ffdf00"/><circle cx="30" cy="21" r="10" fill="#002776"/></svg>'
   ALT_HREFLANG="pt-BR"
   THIS_HREFLANG="en"
 else
   HTML_LANG="pt-BR"
   HEADER_FILE="$ROOT/scripts/_header.html"
   FOOTER_FILE="$ROOT/scripts/_footer.html"
-  ALT_LABEL="🇬🇧 English"
+  ALT_LABEL='<svg viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect width="60" height="30" fill="#00247d"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/></svg>'
   ALT_HREFLANG="en"
   THIS_HREFLANG="pt-BR"
 fi
@@ -57,7 +57,10 @@ fi
 } > "$OUT"
 
 if [ -n "$ALT_URL" ]; then
-  sed -i "s#__ALT_LANG_URL__#${ALT_URL}#g; s#__ALT_LANG_LABEL__#${ALT_LABEL}#g" "$OUT"
+  ALT_URL="$ALT_URL" ALT_LABEL="$ALT_LABEL" perl -i -pe '
+    s/__ALT_LANG_URL__/$ENV{ALT_URL}/g;
+    s/__ALT_LANG_LABEL__/$ENV{ALT_LABEL}/g;
+  ' "$OUT"
 else
   # No alt page yet: hide the switcher entirely rather than leave a dead link
   sed -i '/lang-switch/d' "$OUT"
