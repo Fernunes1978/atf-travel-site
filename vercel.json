@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/aspen", "destination": "/aspen/", "permanent": true }
+  ]
+}
