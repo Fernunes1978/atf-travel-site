@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ski Andorra 2027 · ATF Snow Trip</title>
+<meta name="description" content="Sete dias de neve nos Pireneus, de 13 a 19 de janeiro de 2027: Hotel Casa Serras e Sport Hotel Village, 3 dias de esqui com equipamento e van privativa desde Barcelona. Curadoria de quem esteve lá.">
+<meta property="og:title" content="Ski Andorra 2027 · ATF Snow Trip">
+<meta property="og:description" content="7 dias nos Pireneus com curadoria de quem esteve lá. A partir de € 1.983 por pessoa, em até 6x.">
+<meta property="og:image" content="https://www.atft.com.br/andorra/fotos/andorra-hero.jpg">
+<meta property="og:url" content="https://www.atft.com.br/andorra/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- ===== CONFIGURAÇÃO (preencher pela equipe técnica) ===== -->
+<script>
+  window.META_PIXEL_ID = '715577052173962';   // ex.: '123456789012345'
+  window.GA4_ID = 'G-KXN6434KQL';   // ex.: 'G-ABC123XYZ'
+  window.WHATSAPP_NUMBER = '5519991741585'; // só números, com 55 + DDD
+</script>
+<script>
+  (function () {
+    if (window.META_PIXEL_ID) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.META_PIXEL_ID); fbq('track', 'PageView');
+    }
+    if (window.GA4_ID) {
+      var g = document.createElement('script'); g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA4_ID;
+      document.head.appendChild(g);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', window.GA4_ID);
+    }
+  })();
+</script>
+
+<style>
+  :root{
+    --ink:#16212A; --ink-2:#1E2C38; --ink-3:#2A3B49;
+    --gold:#A8875A; --gold-soft:#C9AE85;
+    --snow:#F7F5F1; --paper:#FFFFFF; --stone:#E8E3DA;
+    --text:#2B2F33; --muted:#6B7177; --line:#DDD6CA;
+    --serif:'Cormorant Garamond', Georgia, serif;
+    --sans:'Jost', system-ui, -apple-system, sans-serif;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--snow);line-height:1.7;font-size:17px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:var(--sans);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;color:var(--ink)}
+  h2{font-size:clamp(2rem,4vw,3rem);margin:.5rem 0 1.25rem}
+  h3{font-size:1.6rem}
+  .lead{font-size:1.12rem;color:var(--muted);max-width:640px}
+  section{padding:110px 0}
+  .rule{width:56px;height:1px;background:var(--gold);margin:1.4rem 0}
+
+  /* Botões */
+  .btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;text-decoration:none;padding:16px 30px;border:1px solid var(--gold);transition:all .3s ease;cursor:pointer}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:#94764d;border-color:#94764d}
+  .btn-line{color:#fff;background:transparent;border-color:rgba(255,255,255,.55)}
+  .btn-line:hover{border-color:var(--gold);color:var(--gold-soft)}
+  .btn-dark{color:var(--ink);background:transparent}
+  .btn-dark:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+  /* Placeholders de fotos do acervo */
+  .ph{position:relative;overflow:hidden;background:linear-gradient(160deg,#2A3B49 0%,#16212A 100%);}
+  .ph::before{content:attr(data-foto);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;color:rgba(255,255,255,.55);font-size:.8rem;letter-spacing:.06em;line-height:1.5;border:1px dashed rgba(168,135,90,.45);margin:14px}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+  /* Header */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .35s ease,box-shadow .35s ease}
+  header.solid{background:rgba(22,33,42,.96);box-shadow:0 1px 0 rgba(168,135,90,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+  .logo{display:flex;align-items:center;height:64px;text-decoration:none}
+  .logo img{height:64px;width:auto;filter:brightness(1.75) saturate(.7)}
+  .logo-fallback{display:none;font-family:var(--serif);font-size:1.5rem;color:#fff;letter-spacing:.06em}
+  .logo-fallback em{font-style:italic;color:var(--gold-soft);font-size:1rem;margin-left:.4rem}
+  .menu{display:flex;gap:22px;list-style:none;white-space:nowrap}
+  @media (max-width:1240px){.menu{display:none}}
+  .menu a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+  .menu a:hover{color:var(--gold-soft)}
+  .nav .btn{padding:11px 20px;font-size:.72rem}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;padding:160px 0 90px;color:#fff}
+  .hero .ph{position:absolute;inset:0}
+  .hero .ph::before{align-items:flex-start;padding-top:120px}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,33,42,.35) 0%,rgba(22,33,42,.15) 40%,rgba(22,33,42,.88) 100%)}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .9fr;gap:60px;align-items:end;width:100%}
+  .hero h1{color:#fff;font-size:clamp(2.6rem,6vw,4.8rem);font-weight:400;margin:.8rem 0 1.2rem}
+  .hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .hero p.sub{font-size:1.15rem;color:rgba(255,255,255,.88);max-width:560px;margin-bottom:2.2rem}
+  .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+  .price-card{background:rgba(22,33,42,.78);backdrop-filter:blur(8px);border:1px solid rgba(168,135,90,.5);padding:34px 34px 30px}
+  .price-card .when{font-family:var(--serif);font-size:1.5rem;color:#fff;line-height:1.3}
+  .price-card .when small{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-soft);margin-top:.4rem}
+  .price-card hr{border:0;border-top:1px solid rgba(168,135,90,.35);margin:22px 0}
+  .price-card .from{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+  .price-card .value{font-family:var(--serif);font-size:3.4rem;color:var(--gold-soft);line-height:1;margin:.3rem 0}
+  .price-card .per{font-size:.95rem;color:rgba(255,255,255,.85)}
+  .price-card .inst{margin-top:14px;font-size:.9rem;color:#fff}
+
+  /* Faixa de destaques */
+  .strip{background:var(--ink);color:#fff;padding:0}
+  .strip-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+  .strip-item{padding:34px 20px;text-align:center;border-right:1px solid rgba(168,135,90,.22)}
+  .strip-item:last-child{border-right:0}
+  .strip-item b{display:block;font-family:var(--serif);font-weight:500;font-size:1.7rem;color:var(--gold-soft);line-height:1.1}
+  .strip-item span{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+
+  /* Especialista */
+  .story-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
+  .story-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:340px auto;gap:14px}
+  .story-photos .ph:not(:first-child){aspect-ratio:3/4}
+  .story-photos .ph:first-child{grid-column:1 / 3}
+  .ph-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 14px;font-size:.78rem;letter-spacing:.04em;color:#fff;background:linear-gradient(transparent,rgba(22,33,42,.8))}
+  .hotel-media.hotel-duo{min-height:620px}
+  .hotel-duo{display:grid;grid-template-rows:1fr 1fr;gap:6px;background:var(--paper)}
+  .hotel-media > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hotel-duo .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mini-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+  .mini-gal .ph{aspect-ratio:3/4}
+  .mini-gal-4{grid-template-columns:repeat(4,1fr)}
+  .gal-label{margin:26px 0 0!important;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)!important}
+  @media (max-width:600px){.mini-gal-4{grid-template-columns:repeat(2,1fr)}}
+  .mini-gal .ph::before{font-size:.6rem;margin:6px;padding:6px}
+  .mini-gal video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .mini-gal .ph-cap{padding:18px 8px 6px;font-size:.62rem}
+  .story-videos{grid-column:1 / 3;margin:6px 0 0;text-align:center}
+  .story-videos .video-pair{max-width:340px;margin:0 auto;gap:10px}
+  .story-videos .video-frame{aspect-ratio:9/16;background:var(--ink)}
+  .story-videos video{width:100%;height:100%;object-fit:contain;display:block}
+  .story-videos figcaption{margin-top:10px;font-size:.85rem;color:var(--muted)}
+  .story-videos figcaption .eyebrow{display:block;margin-bottom:4px}
+  .video-block{margin:90px auto 0;max-width:560px;text-align:center}
+  .video-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .video-frame{position:relative;background:var(--ink);aspect-ratio:9/16;overflow:hidden;border-bottom:2px solid var(--gold)}
+  .video-frame video{width:100%;height:100%;object-fit:cover;display:block}
+  .video-block figcaption{margin-top:18px;color:var(--muted);font-size:.95rem}
+  .video-block figcaption .eyebrow{display:block;margin-bottom:6px}
+  .story blockquote{font-family:var(--serif);font-style:italic;font-size:1.55rem;line-height:1.45;color:var(--ink);border-left:1px solid var(--gold);padding-left:24px;margin:28px 0}
+  .story p{margin-bottom:1.1rem}
+  .stays{list-style:none;margin:26px 0 8px;border-top:1px solid var(--line)}
+  .stays li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.98rem}
+  .stays li span:last-child{color:var(--muted);white-space:nowrap}
+  .sign{font-family:var(--serif);font-size:1.25rem;color:var(--ink);margin-top:18px}
+  .sign small{display:block;font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+
+  /* Perfis */
+  .profiles{background:var(--paper)}
+  .prof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+  .prof{background:var(--snow);display:flex;flex-direction:column}
+  .prof .ph{height:260px}
+  .prof-body{padding:32px 30px 36px;flex:1;display:flex;flex-direction:column}
+  .prof h3{margin:.4rem 0 .9rem}
+  .prof p{color:var(--muted);font-size:.98rem;flex:1}
+  .prof a{margin-top:22px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;font-weight:500}
+  .prof a:hover{color:var(--ink)}
+
+  /* Hotéis */
+  .hotel{display:grid;grid-template-columns:1.1fr 1fr;gap:0;background:var(--paper);margin-top:44px}
+  .hotel:nth-of-type(even){grid-template-columns:1fr 1.1fr}
+  .hotel:nth-of-type(even) .hotel-media{order:2}
+  .hotel-media{min-height:460px}
+  .hotel-body{padding:56px 56px}
+  .hotel-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin:18px 0 22px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+  .hotel-body p{color:var(--muted);margin-bottom:1rem}
+  .hotel-body ul{list-style:none;margin-top:18px}
+  .hotel-body li{padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--line);font-size:.96rem}
+  .hotel-body li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--gold)}
+
+  .gastro{background:var(--paper)}
+  .gastro-head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end}
+  .gastro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:50px}
+  .gastro-grid .ph{aspect-ratio:4/5}
+  .gastro-grid figcaption{margin-top:12px;font-size:.82rem;letter-spacing:.08em;color:var(--muted)}
+  @media (max-width:980px){.gastro-head{grid-template-columns:1fr;gap:10px}.gastro-grid{grid-template-columns:1fr 1fr;gap:12px}}
+  .apres{background:var(--ink-2);color:#fff}
+  .apres h2{color:#fff}
+  .apres p{color:rgba(255,255,255,.75);margin-bottom:1rem}
+  .apres-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+  .apres-media{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .apres-media .ph{aspect-ratio:4/5}
+  .apres-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  @media (max-width:980px){.apres-grid{grid-template-columns:1fr;gap:36px}}
+  .futebol{background:var(--snow)}
+  .futebol-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .futebol-videos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .futebol-videos .ph{aspect-ratio:9/16;border-bottom:2px solid var(--gold)}
+  .futebol-videos video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .futebol p{margin-bottom:1rem}
+  .futebol-list{list-style:none;margin:22px 0 30px;border-top:1px solid var(--line)}
+  .futebol-list li{padding:12px 0 12px 22px;position:relative;border-bottom:1px solid var(--line);font-size:.96rem}
+  .futebol-list li::before{content:"";position:absolute;left:0;top:23px;width:8px;height:1px;background:var(--gold)}
+  @media (max-width:980px){.futebol-grid{grid-template-columns:1fr;gap:40px}.futebol-grid > .reveal:last-child{order:-1}}
+  /* Roteiro */
+  .itin{background:var(--ink);color:#fff}
+  .itin h2{color:#fff}
+  .itin .lead{color:rgba(255,255,255,.7)}
+  .days{margin-top:56px;border-top:1px solid rgba(168,135,90,.3)}
+  .day{display:grid;grid-template-columns:150px 1fr;gap:40px;padding:30px 0;border-bottom:1px solid rgba(168,135,90,.3)}
+  .day-date{font-family:var(--serif);font-size:1.9rem;color:var(--gold-soft);line-height:1}
+  .day-date small{display:block;font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-top:8px}
+  .day h3{color:#fff;font-size:1.45rem;margin-bottom:.4rem}
+  .day p{color:rgba(255,255,255,.72);font-size:.98rem}
+
+  /* Incluso */
+  .incl-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;margin-top:50px;align-items:start}
+  table{width:100%;border-collapse:collapse;background:var(--paper)}
+  th{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;text-align:left;padding:18px 20px;border-bottom:1px solid var(--gold)}
+  td{padding:18px 20px;border-bottom:1px solid var(--line);vertical-align:top;font-size:.96rem}
+  td strong{font-family:var(--serif);font-weight:500;font-size:1.2rem;color:var(--ink);display:block;line-height:1.2}
+  td small{color:var(--muted);font-size:.86rem}
+  td.d{white-space:nowrap;color:var(--muted)}
+  .aside{background:var(--paper);padding:36px;border-top:2px solid var(--gold)}
+  .aside h3{font-size:1.35rem;margin-bottom:.8rem}
+  .aside ul{list-style:none}
+  .aside li{padding:8px 0;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+  .aside li:last-child{border:0}
+
+  /* Investimento */
+  .offer{background:var(--stone)}
+  .offer-box{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:#fff}
+  .offer-l{padding:64px 60px;border-right:1px solid rgba(168,135,90,.3)}
+  .offer-r{padding:64px 60px;display:flex;flex-direction:column;justify-content:center}
+  .offer h2{color:#fff}
+  .offer-l p{color:rgba(255,255,255,.75)}
+  .prices{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
+  .prices div small{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+  .prices div b{display:block;font-family:var(--serif);font-weight:500;font-size:2.8rem;color:var(--gold-soft);line-height:1.1;margin:.2rem 0}
+  .prices div span{font-size:.92rem;color:rgba(255,255,255,.8)}
+  .fine{font-size:.82rem;color:rgba(255,255,255,.55);margin-top:22px}
+
+  /* Formulário */
+  .form-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start}
+  form{background:var(--paper);padding:48px;border-top:2px solid var(--gold)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  label{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px;font-weight:500}
+  input,select,textarea{width:100%;font-family:var(--sans);font-size:1rem;font-weight:300;color:var(--text);background:var(--snow);border:1px solid var(--line);padding:14px 16px;border-radius:0;outline:none;transition:border .2s}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+  textarea{min-height:96px;resize:vertical}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;position:relative}
+  .chips input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+  .chips label{margin:0;padding:11px 18px;border:1px solid var(--line);cursor:pointer;text-transform:none;letter-spacing:.02em;font-size:.95rem;font-weight:400;color:var(--text);background:var(--snow)}
+  .chips input:checked + label{border-color:var(--gold);background:#F3ECE1;color:var(--ink)}
+  form .btn{width:100%;justify-content:center;margin-top:30px}
+  .consent{font-size:.8rem;color:var(--muted);margin-top:14px;line-height:1.5}
+  .ok{display:none;text-align:center;padding:30px 0}
+  .ok h3{margin-bottom:.6rem}
+  .contact-alt{margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+  .contact-alt p{color:var(--muted);font-size:.96rem;margin-bottom:14px}
+
+  /* FAQ */
+  .faq{background:var(--paper)}
+  .faq-list{max-width:860px;margin:50px auto 0}
+  details{border-bottom:1px solid var(--line)}
+  summary{list-style:none;cursor:pointer;padding:24px 40px 24px 0;font-family:var(--serif);font-size:1.35rem;color:var(--ink);position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:20px;font-family:var(--sans);font-weight:300;font-size:1.6rem;color:var(--gold);transition:transform .25s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 24px;color:var(--muted);max-width:760px}
+
+  /* Footer */
+  footer{background:var(--ink);color:rgba(255,255,255,.65);padding:70px 0 40px;font-size:.9rem}
+  .foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;align-items:flex-start}
+  footer .logo{height:80px} footer .logo img{height:80px}
+  footer a{text-decoration:none;color:var(--gold-soft)}
+  footer .legal{margin-top:46px;padding-top:24px;border-top:1px solid rgba(168,135,90,.2);font-size:.78rem;color:rgba(255,255,255,.45)}
+
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s}
+  .wa-float:hover{transform:scale(1.06)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:980px){
+    section{padding:80px 0}
+    .menu{display:none}
+    .hero-inner,.story-grid,.incl-grid,.form-grid,.offer-box{grid-template-columns:1fr;gap:44px}
+    .hotel,.hotel:nth-of-type(even){grid-template-columns:1fr}
+    .hotel:nth-of-type(even) .hotel-media{order:0}
+    .hotel-media{min-height:300px}
+    .hotel-media.hotel-duo{min-height:560px}
+    .hotel-body{padding:38px 28px}
+    .prof-grid{grid-template-columns:1fr}
+    .strip-grid{grid-template-columns:repeat(2,1fr)}
+    .strip-item{border-bottom:1px solid rgba(168,135,90,.22)}
+    .strip-item:last-child{grid-column:1 / 3}
+    .offer-l,.offer-r{padding:44px 28px}
+    .offer-l{border-right:0;border-bottom:1px solid rgba(168,135,90,.3)}
+  }
+  @media (max-width:600px){
+    body{font-size:16px}
+    .wrap{padding:0 16px}
+    .nav{height:70px}
+    .logo{height:50px} .logo img{height:50px}
+    .nav .btn{padding:10px 14px;letter-spacing:.12em}
+    .hero{padding:120px 0 60px}
+    .hero::after{background:linear-gradient(180deg,rgba(22,33,42,.6) 0%,rgba(22,33,42,.55) 45%,rgba(22,33,42,.92) 100%)}
+    .hero .ph::before{content:"FOTO DE ABERTURA · fotos/andorra-hero.jpg";align-items:flex-start;padding-top:70px;font-size:.7rem}
+    .price-card{padding:26px 22px}
+    .story-photos{grid-template-rows:260px auto}
+    .day{grid-template-columns:1fr;gap:10px}
+    .row{grid-template-columns:1fr;gap:0}
+    form{padding:30px 20px}
+    th,td{padding:14px 10px}
+    td.d{font-size:.85rem}
+    .prices{grid-template-columns:1fr}
+    .hero-ctas .btn{width:100%;justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="ATF Snow Trip">
+      <img src="logo.png" alt="ATF Snow Trip" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="logo-fallback">AT|F <em>Snow Trip</em></span>
+    </a>
+    <ul class="menu">
+      <li><a href="#especialista">A curadoria</a></li>
+      <li><a href="#hoteis">Hotéis</a></li>
+      <li><a href="#gastronomia">Gastronomia</a></li>
+      <li><a href="#apres-ski">Après-ski</a></li>
+      <li><a href="#futebol">Futebol</a></li>
+      <li><a href="#roteiro">Roteiro</a></li>
+      <li><a href="#incluso">O que inclui</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+    </ul>
+    <a class="btn btn-gold js-wa" href="#" data-msg="Olá! Vi a página do Ski Andorra 2027 e gostaria de mais informações.">Falar no WhatsApp</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="ph" data-foto="FOTO DE ABERTURA (acervo próprio, jan/2026) · Vista ampla das pistas de Grandvalira com os Pireneus ao fundo, em dia de céu azul · arquivo: fotos/andorra-hero.jpg · horizontal, 2000 px">
+    <img src="fotos/andorra-hero.jpg" alt="Pistas de Grandvalira, Andorra, nos Pireneus" style="object-position:50% 58%" onerror="this.remove()">
+  </div>
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">ATF Snow Trip · Pireneus</span>
+      <h1>Ski Andorra:<br><em>sete dias de neve</em> com curadoria de quem esteve lá</h1>
+      <p class="sub">Um roteiro desenhado a partir da minha própria viagem a Andorra em janeiro de 2026. Dois hotéis escolhidos a dedo, três dias nas pistas de Grandvalira e traslado privativo desde Barcelona, para você só se preocupar em aproveitar.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#reserva">Consultar disponibilidade</a>
+        <a class="btn btn-line" href="#roteiro">Ver o roteiro</a>
+      </div>
+    </div>
+    <aside class="price-card">
+      <div class="when">13 a 19 de janeiro de 2027<small>7 dias · 6 noites</small></div>
+      <hr>
+      <div class="from">A partir de</div>
+      <div class="value">€ 1.983</div>
+      <div class="per">por pessoa · € 3.966 por casal</div>
+      <div class="inst">Em até 6x no cartão</div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===== FAIXA ===== -->
+<section class="strip">
+  <div class="wrap strip-grid">
+    <div class="strip-item"><b>2 noites</b><span>Casa Serras · 5 estrelas</span></div>
+    <div class="strip-item"><b>4 noites</b><span>Sport Hotel Village · Soldeu</span></div>
+    <div class="strip-item"><b>3 dias</b><span>de esqui com lift</span></div>
+    <div class="strip-item"><b>3 dias</b><span>de equipamento</span></div>
+    <div class="strip-item"><b>Van privativa</b><span>Barcelona ↔ Andorra</span></div>
+  </div>
+</section>
+
+<!-- ===== ESPECIALISTA ===== -->
+<section id="especialista" class="story">
+  <div class="wrap story-grid">
+    <div class="story-photos reveal">
+      <div class="ph" data-foto="SUA FOTO NA VIAGEM · Fernando nas pistas ou no teleférico em Andorra, jan/2026 · arquivo: fotos/andorra-especialista.jpg">
+        <img src="fotos/andorra-especialista.jpg" alt="Fernando Nunes na pista Àliga, em Grandvalira, janeiro de 2026" style="object-position:50% 72%" onerror="this.remove()">
+        <span class="ph-cap">Na pista Àliga, palco da Copa do Mundo de esqui em Grandvalira · jan/2026</span>
+      </div>
+      <div class="ph" data-foto="Teleférico ou cadeirinha subindo a montanha · fotos/andorra-teleferico.jpg">
+        <img src="fotos/andorra-teleferico.jpg" alt="Vista da cadeirinha sobre as pistas de Grandvalira" onerror="this.remove()">
+      </div>
+      <div class="ph" data-foto="Fernando nas pistas · fotos/andorra-pistas.jpg">
+        <img src="fotos/andorra-pistas.jpg" alt="Fernando nas pistas de Grandvalira" style="object-position:50% 50%" onerror="this.remove()">
+      </div>
+      <figure class="story-videos">
+        <div class="video-pair">
+          <div class="video-frame">
+            <video autoplay muted loop playsinline preload="metadata" poster="fotos/andorra-pistas-sol-capa.jpg" aria-label="Esquiando em Grandvalira em dia de sol">
+              <source src="videos/andorra-pistas-sol.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-frame">
+            <video autoplay muted loop playsinline preload="metadata" poster="fotos/andorra-video-capa.jpg" aria-label="No teleférico durante a nevada">
+              <source src="videos/andorra-especialista.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <figcaption><span class="eyebrow">Direto das pistas</span>Dia de sol e neve fresca em Grandvalira · jan/2026</figcaption>
+      </figure>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">O olhar do especialista</span>
+      <h2>Eu estive lá antes de indicar para você</h2>
+      <p>Em janeiro de 2026, fiz pessoalmente o caminho que proponho a você: chegada por Barcelona, traslado até Andorra e uma sequência de hotéis que testei um a um. Não escolhemos hospedagem pelo catálogo: dormimos em cada hotel, jantamos nos restaurantes e conferimos a distância até as pistas e o conforto depois de um dia inteiro na neve.</p>
+      <ul class="stays">
+        <li><span>Hotel Casa Serras · centro de Andorra</span><span>jan/2026</span></li>
+        <li><span>Hotel Serras Andorra · pé da montanha</span><span>jan/2026</span></li>
+        <li><span>Sport Hotel Village · Soldeu</span><span>4 noites · jan/2026</span></li>
+      </ul>
+      <blockquote>Começar no centro de Andorra, caminhando à noite entre lojas e bons restaurantes, e depois subir para a montanha. Foi nessa viagem que defini o formato deste roteiro.</blockquote>
+      <p>Um detalhe fez toda a diferença: no dia da mudança para o Sport Hotel Village, pegamos o traslado direto para Soldeu, retiramos os equipamentos e passamos o dia inteiro esquiando, enquanto as malas seguiam sozinhas para o hotel. Nenhuma hora perdida com check-out e bagagem.</p>
+      <p>É esse olhar de bastidor que acompanha você em cada etapa: horários de traslado, retirada do equipamento, o que levar na mala e onde vale a pena reservar um jantar ou um almoço na montanha.</p>
+      <div class="sign">Fernando Nunes<small>ATF Travel · ATF Snow Trip</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PERFIS ===== -->
+<section class="profiles">
+  <div class="wrap">
+    <span class="eyebrow">Para quem é esta viagem</span>
+    <h2>Um destino, três formas de viver a neve</h2>
+    <p class="lead">Andorra combina pistas para todos os níveis, vilas charmosas e uma estrutura acolhedora. Por isso funciona tão bem para famílias, casais e grupos de amigos.</p>
+    <div class="prof-grid">
+      <article class="prof reveal">
+        <div class="ph" data-foto="Família na neve ou crianças na escola de esqui · fotos/andorra-familia.jpg">
+          <img src="fotos/andorra-familia.jpg" alt="Nossa família no centro de Andorra, janeiro de 2026" style="object-position:50% 35%" onerror="this.remove()">
+        </div>
+        <div class="prof-body">
+          <span class="eyebrow">Famílias</span>
+          <h3>Primeira neve das crianças, sem pressa</h3>
+          <p>Áreas de iniciantes amplas, escolas de esqui estruturadas e hotéis próximos às pistas. A van privativa leva todos juntos desde Barcelona. Com crianças pequenas, indicamos também o Serras Andorra, com pista particular e estrutura kids.</p>
+          <a href="#reserva" data-perfil="familia" class="js-perfil">Planejar para minha família →</a>
+        </div>
+      </article>
+      <article class="prof reveal">
+        <div class="ph" data-foto="Spa do hotel ou jantar com vista para a montanha · fotos/andorra-casal.jpg">
+          <img src="fotos/andorra-casal.jpg" alt="Boas-vindas no quarto do Hotel Casa Serras" style="object-position:50% 65%" onerror="this.remove()">
+        </div>
+        <div class="prof-body">
+          <span class="eyebrow">Casais</span>
+          <h3>Neve de dia, spa e boa mesa à noite</h3>
+          <p>Quatro noites no Sport Hotel Village com quarto de vista para Soldeu e spa incluído. Manhãs nas pistas, tardes de descanso e noites de gastronomia de montanha, no ritmo de vocês dois.</p>
+          <a href="#reserva" data-perfil="casal" class="js-perfil">Planejar a viagem a dois →</a>
+        </div>
+      </article>
+      <article class="prof reveal">
+        <div class="ph" data-foto="Grupo nas pistas ou après-ski em Soldeu · fotos/andorra-amigos.jpg">
+          <img src="fotos/andorra-amigos.jpg" alt="Grupo reunido no terraço com os Pireneus ao fundo" style="object-position:50% 55%" onerror="this.remove()">
+        </div>
+        <div class="prof-body">
+          <span class="eyebrow">Grupos de amigos</span>
+          <h3>Pistas extensas e après-ski animado</h3>
+          <p>Grandvalira é o maior domínio esquiável dos Pireneus, com pistas para quem já esquia e quer explorar. A van comporta até seis pessoas, o tamanho ideal para um grupo viajar junto.</p>
+          <a href="#reserva" data-perfil="amigos" class="js-perfil">Planejar com meu grupo →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOTÉIS ===== -->
+<section id="hoteis">
+  <div class="wrap">
+    <span class="eyebrow">Hospedagem com curadoria</span>
+    <h2>Do centro de Andorra à montanha</h2>
+    <p class="lead">Os dois hotéis do pacote têm café da manhã diário incluso e foram escolhidos depois da nossa estadia em janeiro de 2026.</p>
+
+    <article class="hotel reveal">
+      <div class="hotel-media hotel-duo">
+        <div class="ph" data-foto="Quarto do Casa Serras · fotos/casa-serras-quarto2.jpg">
+          <img src="fotos/casa-serras-quarto2.jpg" alt="Quarto do Hotel Casa Serras com cabeceira em madeira" style="object-position:50% 55%" onerror="this.remove()">
+          <span class="ph-cap">Quarto com cabeceira em madeira</span>
+        </div>
+        <div class="ph" data-foto="Quarto Deluxe do Casa Serras · fotos/casa-serras.jpg">
+          <img src="fotos/casa-serras.jpg" alt="Quarto Deluxe do Hotel Casa Serras" style="object-position:50% 60%" onerror="this.remove()">
+          <span class="ph-cap">Quarto Deluxe</span>
+        </div>
+      </div>
+      <div class="hotel-body">
+        <span class="eyebrow">Noites 1 e 2 · 13 a 15 de janeiro</span>
+        <h3>Hotel Casa Serras</h3>
+        <div class="hotel-meta"><span>5 estrelas</span><span>Centro de Andorra</span><span>Inaugurado em dez/2025</span><span>Deluxe Room</span><span>Café da manhã</span></div>
+        <p>Inaugurado em 20 de dezembro de 2025, o Casa Serras é a grande novidade da hotelaria de luxo em Andorra, e fomos os primeiros agentes de viagem a conhecê-lo. Muito bem localizado, no centro de Andorra, perto das lojas e de ótimos restaurantes. É o tipo de lugar em que se sai para caminhar à noite com tranquilidade. O próprio hotel tem um restaurante com menu degustação em passos, um jantar que vale a reserva.</p>
+        <ul>
+          <li>Hotel cinco estrelas recém-inaugurado, ideal para o início da viagem</li>
+          <li>Ruas de compras e restaurantes a pé</li>
+          <li>Jantar degustação no restaurante do hotel (à parte)</li>
+        </ul>
+        <div class="mini-gal">
+          <div class="ph" data-foto="fotos/andorra-casal.jpg"><img src="fotos/andorra-casal.jpg" alt="Boas-vindas no quarto do Hotel Casa Serras" style="object-position:50% 65%" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/casa-serras-quarto3.jpg"><img src="fotos/casa-serras-quarto3.jpg" alt="Quarto do Hotel Casa Serras" style="object-position:30% 60%" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/casa-serras-escultura.jpg"><img src="fotos/casa-serras-escultura.jpg" alt="Escultura na decoração do Hotel Casa Serras" style="object-position:50% 40%" onerror="this.remove()"></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="hotel reveal">
+      <div class="hotel-media ph" data-foto="Complexo Sport Hotels · fotos/hermitage-sala.jpg">
+        <img src="fotos/hermitage-sala.jpg" alt="Suíte do Sport Hotel Hermitage, no complexo Sport Hotels em Soldeu" style="object-position:50% 45%" onerror="this.remove()">
+        <span class="ph-cap">Complexo Sport Hotels, Soldeu · suíte do Hermitage</span>
+      </div>
+      <div class="hotel-body">
+        <span class="eyebrow">Noites 3 a 6 · 15 a 19 de janeiro</span>
+        <h3>Sport Hotel Village</h3>
+        <div class="hotel-meta"><span>Soldeu</span><span>Soldeu Views com spa</span><span>Café da manhã</span></div>
+        <p>O coração da viagem. No final de Soldeu, o hotel é praticamente ski out: você termina o dia nas pistas e chega ao hotel sem complicação, com armários e toda a estrutura para guardar os equipamentos. Foram quatro noites aqui, com quarto de frente para a montanha e uma vista sensacional. Fomos recebidos pela direção do hotel para um jantar que mostrou o cuidado da casa com cada hóspede.</p>
+        <p>O hotel faz parte do complexo Sport Hotels, que conhecemos por inteiro durante a estadia. Ali também está o Hermitage, a ala cinco estrelas, e o spa compartilhado entre os hotéis é considerado um dos melhores de Andorra. Vale muito a pena ficar aqui.</p>
+        <ul>
+          <li>Quarto de frente para a montanha, com acesso ao spa</li>
+          <li>Praticamente ski out, com armários para equipamentos</li>
+          <li>Spa compartilhado com o Hermitage, considerado um dos melhores de Andorra</li>
+          <li>Upgrade para o Hermitage, a ala cinco estrelas do complexo, sob consulta</li>
+          <li>Restaurantes e après-ski na vila</li>
+        </ul>
+        <p class="gal-label">Vista do quarto e o Hermitage, a ala cinco estrelas do complexo</p>
+        <div class="mini-gal mini-gal-4">
+          <div class="ph" data-foto="videos/sport-village-vista.mp4"><video autoplay muted loop playsinline preload="metadata" poster="fotos/sport-village-vista-capa.jpg" aria-label="Vista do quarto do Sport Hotel Village para as pistas"><source src="videos/sport-village-vista.mp4" type="video/mp4"></video><span class="ph-cap">Vista do quarto</span></div>
+          <div class="ph" data-foto="fotos/hermitage-suite.jpg"><img src="fotos/hermitage-suite.jpg" alt="Suíte do Sport Hotel Hermitage" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/hermitage-quarto.jpg"><img src="fotos/hermitage-quarto.jpg" alt="Quarto em madeira do Sport Hotel Hermitage" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/hermitage-natal.jpg"><img src="fotos/hermitage-natal.jpg" alt="Decoração de Natal no lounge do Sport Hotel Hermitage" style="object-position:60% 40%" onerror="this.remove()"></div>
+        </div>
+      </div>
+    </article>
+    <article class="hotel reveal">
+      <div class="hotel-media ph" data-foto="Ski room do Serras Andorra · fotos/serras-andorra.jpg">
+        <img src="fotos/serras-andorra.jpg" alt="Ski room do Hotel Serras Andorra" style="object-position:50% 30%" onerror="this.remove()">
+        <span class="ph-cap">Ski room com atendimento</span>
+      </div>
+      <div class="hotel-body">
+        <span class="eyebrow">Alternativa para famílias · sob consulta</span>
+        <h3>Hotel Serras Andorra</h3>
+        <div class="hotel-meta"><span>Pé da montanha</span><span>Pista particular</span><span>Estrutura kids</span></div>
+        <p>Também nos hospedamos aqui em janeiro de 2026. O hotel fica já no pé da montanha e tem pista de esqui particular, que se vê da varanda do quarto. Um diferencial enorme para quem viaja com filhos pequenos ou está começando na neve.</p>
+        <ul>
+          <li>Pista particular para os primeiros passos no esqui</li>
+          <li>Ótima estrutura para crianças</li>
+          <li>Ski room com armários individuais e ventilados para o equipamento</li>
+          <li>Pode substituir ou complementar uma das etapas do roteiro</li>
+        </ul>
+        <div class="mini-gal mini-gal-4">
+          <div class="ph" data-foto="videos/serras-andorra-pista.mp4"><video autoplay muted loop playsinline preload="metadata" poster="fotos/serras-andorra-pista-capa.jpg" aria-label="Pista particular do Serras Andorra vista do quarto"><source src="videos/serras-andorra-pista.mp4" type="video/mp4"></video><span class="ph-cap">Pista particular</span></div>
+          <div class="ph" data-foto="fotos/serras-armarios.jpg"><img src="fotos/serras-armarios.jpg" alt="Armários de esqui individuais do Serras Andorra" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/serras-spa.jpg"><img src="fotos/serras-spa.jpg" alt="Piscina do spa do Serras Andorra" onerror="this.remove()"></div>
+          <div class="ph" data-foto="fotos/serras-decor.jpg"><img src="fotos/serras-decor.jpg" alt="Esquis antigos na decoração do Serras Andorra" onerror="this.remove()"></div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== GASTRONOMIA ===== -->
+<section id="gastronomia" class="gastro">
+  <div class="wrap">
+    <div class="gastro-head">
+      <div>
+        <span class="eyebrow">Gastronomia em Andorra</span>
+        <h2>À mesa, a viagem continua</h2>
+      </div>
+      <p class="lead">Boa parte das memórias desta viagem aconteceu à mesa: o jantar degustação no Casa Serras, um jantar muito especial no Serras Andorra, a noite com a direção do Sport Hotels em Soldeu e os almoços e jantares na montanha entre um dia de esqui e outro. Indicamos cada endereço e cuidamos das reservas.</p>
+    </div>
+    <div class="gastro-grid">
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-cafe-manha.jpg"><img src="fotos/gastro-cafe-manha.jpg" alt="Café da manhã com frutas frescas" style="object-position:50% 50%" loading="lazy" onerror="this.remove()"></div><figcaption>Café da manhã com frutas frescas</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-risoto.jpg"><img src="fotos/gastro-risoto.jpg" alt="Risoto com foie gras" style="object-position:50% 40%" loading="lazy" onerror="this.remove()"></div><figcaption>Risoto com foie gras</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-cenouras.jpg"><img src="fotos/gastro-cenouras.jpg" alt="Cenouras assadas com cítricos" style="object-position:50% 50%" loading="lazy" onerror="this.remove()"></div><figcaption>Cenouras assadas com cítricos</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-canelone.jpg"><img src="fotos/gastro-canelone.jpg" alt="Canelone gratinado" style="object-position:50% 60%" loading="lazy" onerror="this.remove()"></div><figcaption>Canelone gratinado</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-queijos.jpg"><img src="fotos/gastro-queijos.jpg" alt="Mesa de queijos" style="object-position:50% 60%" loading="lazy" onerror="this.remove()"></div><figcaption>Mesa de queijos</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-mousse.jpg"><img src="fotos/gastro-mousse.jpg" alt="Entrada de alta gastronomia" style="object-position:50% 50%" loading="lazy" onerror="this.remove()"></div><figcaption>Entrada de alta gastronomia</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-burrata.jpg"><img src="fotos/gastro-burrata.jpg" alt="Burrata com salmão e rúcula" style="object-position:50% 40%" loading="lazy" onerror="this.remove()"></div><figcaption>Burrata com salmão e rúcula</figcaption></figure>
+      <figure class="reveal"><div class="ph" data-foto="fotos/gastro-vieira.jpg"><img src="fotos/gastro-vieira.jpg" alt="Vieira na concha" style="object-position:50% 50%" loading="lazy" onerror="this.remove()"></div><figcaption>Vieira na concha</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APRÈS-SKI ===== -->
+<section id="apres-ski" class="apres">
+  <div class="wrap apres-grid">
+    <div class="apres-text reveal">
+      <span class="eyebrow">Après-ski em Andorra</span>
+      <h2>Quando as pistas fecham, a montanha continua</h2>
+      <p>No fim da tarde, a festa começa ao pé das pistas. Conhecemos o L'Abarset, em Grandvalira: DJ ao ar livre com a montanha ao fundo, terraço com lareiras, espumante no gelo e uma noite que vai longe.</p>
+      <p>Para grupos de amigos, é parada obrigatória. Para casais e famílias, vale ao menos um fim de tarde no terraço, antes de voltar ao hotel. Indicamos o melhor horário e reservamos a mesa para você.</p>
+    </div>
+    <div class="apres-media reveal">
+      <div class="ph apres-video" data-foto="Après-ski no L'Abarset · videos/apres-ski-labarset.mp4">
+        <video autoplay muted loop playsinline preload="metadata" poster="fotos/apres-ski-labarset-capa.jpg" aria-label="Terraço do L'Abarset no fim de tarde">
+          <source src="videos/apres-ski-labarset.mp4" type="video/mp4">
+        </video>
+        <span class="ph-cap">Fim de tarde no terraço</span>
+      </div>
+      <div class="ph" data-foto="fotos/apres-labarset-dj.jpg"><img src="fotos/apres-labarset-dj.jpg" alt="DJ ao ar livre no L'Abarset com a montanha ao fundo" onerror="this.remove()"><span class="ph-cap">DJ ao ar livre</span></div>
+      <div class="ph" data-foto="fotos/apres-labarset-noite.jpg"><img src="fotos/apres-labarset-noite.jpg" alt="Festa à noite no L'Abarset" onerror="this.remove()"><span class="ph-cap">A noite vai longe</span></div>
+      <div class="ph" data-foto="fotos/apres-labarset-neon.jpg"><img src="fotos/apres-labarset-neon.jpg" alt="Letreiro do L'Abarset" style="object-position:50% 70%" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FUTEBOL ===== -->
+<section id="futebol" class="futebol">
+  <div class="wrap futebol-grid">
+    <div class="futebol-videos reveal">
+      <div class="ph" data-foto="videos/futebol-barcelona.mp4">
+        <video autoplay muted loop playsinline preload="metadata" poster="fotos/futebol-barcelona-capa.jpg" aria-label="Fernando em jogo do Barcelona">
+          <source src="videos/futebol-barcelona.mp4" type="video/mp4">
+        </video>
+        <span class="ph-cap">Jogo do Barcelona</span>
+      </div>
+      <div class="ph" data-foto="videos/futebol-madri.mp4">
+        <video autoplay muted loop playsinline preload="metadata" poster="fotos/futebol-madri-capa.jpg" aria-label="Fernando em jogo do Real Madrid">
+          <source src="videos/futebol-madri.mp4" type="video/mp4">
+        </video>
+        <span class="ph-cap">Jogo do Real Madrid</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Neve e futebol na mesma viagem</span>
+      <h2>A melhor chegada e saída é pela Espanha</h2>
+      <p class="lead">Andorra se conecta a Barcelona por estrada, e isso abre uma possibilidade única: unir os dias de esqui a um jogo de uma das melhores ligas de futebol do mundo.</p>
+      <p>Antes ou depois da neve, você pode assistir a uma partida do Barcelona ou do Real Madrid. Nós mesmos fizemos isso e recomendamos: é o tipo de memória que transforma uma viagem de esqui em algo inesquecível, especialmente para quem viaja com filhos ou em grupo de amigos.</p>
+      <ul class="futebol-list">
+        <li>Extensão em Barcelona ou Madri, antes ou depois de Andorra</li>
+        <li>Ingressos, hospedagem e traslados organizados pela ATF</li>
+        <li>Datas conforme o calendário de jogos, sob consulta</li>
+      </ul>
+      <a class="btn btn-gold js-wa" href="#" data-msg="Olá! Tenho interesse no Ski Andorra 2027 com extensão para assistir a um jogo do Barcelona ou do Real Madrid.">Quero incluir um jogo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROTEIRO ===== -->
+<section id="roteiro" class="itin">
+  <div class="wrap">
+    <span class="eyebrow">Dia a dia</span>
+    <h2>O roteiro</h2>
+    <p class="lead">Um ritmo pensado para chegar descansado às pistas e aproveitar cada dia de neve.</p>
+    <div class="days">
+      <div class="day reveal"><div class="day-date">13/01<small>quarta</small></div><div><h3>Barcelona → Andorra</h3><p>Recepção em Barcelona e van privativa até Andorra, atravessando os Pireneus. Check-in no Hotel Casa Serras, cinco estrelas no centro de Andorra.</p></div></div>
+      <div class="day reveal"><div class="day-date">14/01<small>quinta</small></div><div><h3>Andorra no seu ritmo</h3><p>Dia livre para se ambientar: compras e caminhadas pelo centro, com tudo a pé a partir do hotel. À noite, recomendamos o jantar degustação do restaurante do Casa Serras.</p></div></div>
+      <div class="day reveal"><div class="day-date">15/01<small>sexta</small></div><div><h3>Rumo a Soldeu</h3><p>Traslado para Soldeu. Organizamos a mudança para que suas malas sigam direto ao Sport Hotel Village enquanto você aproveita o dia. Check-in no quarto com vista para a montanha e acesso ao spa.</p></div></div>
+      <div class="day reveal"><div class="day-date">16 a 18/01<small>sáb · dom · seg</small></div><div><h3>Três dias em Grandvalira</h3><p>Ticket lift com seguro e equipamento de esqui ou snowboard inclusos. Indicamos onde fazer um almoço ou jantar na montanha, um dos pontos altos da nossa viagem. Para quem está começando, aulas com instrutor podem ser reservadas à parte, em grupo ou particulares.</p></div></div>
+      <div class="day reveal"><div class="day-date">19/01<small>terça</small></div><div><h3>Até a próxima temporada</h3><p>Café da manhã, check-out e van privativa de volta a Barcelona.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INCLUSO ===== -->
+<section id="incluso">
+  <div class="wrap">
+    <span class="eyebrow">Transparência</span>
+    <h2>O que está incluso</h2>
+    <div class="incl-grid">
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Item</th><th>Informação</th><th>Datas</th></tr></thead>
+          <tbody>
+            <tr><td>Hotel</td><td><strong>Casa Serras Andorra</strong><small>Deluxe Room · café da manhã</small></td><td class="d">13/01 a 15/01</td></tr>
+            <tr><td>Hotel</td><td><strong>Sport Hotel Village</strong><small>Soldeu Views com spa · café da manhã</small></td><td class="d">15/01 a 19/01</td></tr>
+            <tr><td>Ticket lift</td><td><strong>Meios de elevação</strong><small>Lift + seguro (adulto)</small></td><td class="d">16/01 a 18/01</td></tr>
+            <tr><td>Equipamento</td><td><strong>Esqui ou snowboard</strong><small>Categoria standard</small></td><td class="d">16/01 a 18/01</td></tr>
+            <tr><td>Traslados</td><td><strong>Van privativa (até 6 pessoas)</strong><small>Barcelona ida e volta</small></td><td class="d">13/01 e 19/01</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <aside class="aside">
+        <h3>Não incluso</h3>
+        <ul>
+          <li>Passagens aéreas até Barcelona</li>
+          <li>Aulas de esqui ou snowboard (contratadas à parte)</li>
+          <li>Seguro viagem internacional</li>
+          <li>Refeições não mencionadas e despesas pessoais</li>
+        </ul>
+        <a class="btn btn-dark" style="margin-top:26px" href="#reserva">Montar minha proposta</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INVESTIMENTO ===== -->
+<section id="investimento" class="offer">
+  <div class="wrap">
+    <div class="offer-box reveal">
+      <div class="offer-l">
+        <span class="eyebrow">Investimento</span>
+        <h2>Ski Andorra 2027</h2>
+        <p>13 a 19 de janeiro de 2027 · 7 dias e 6 noites nos Pireneus, com hospedagem, esqui, equipamento e traslados privativos já organizados.</p>
+        <p class="fine">Valores em euros, sujeitos a disponibilidade e confirmação no momento da reserva. Valores para crianças e para quartos com mais ocupantes sob consulta.</p>
+      </div>
+      <div class="offer-r">
+        <div class="prices">
+          <div><small>A partir de</small><b>€ 1.983</b><span>por pessoa</span></div>
+          <div><small>A partir de</small><b>€ 3.966</b><span>por casal</span></div>
+        </div>
+        <p style="color:#fff;margin-bottom:26px">Em até 6x no cartão.</p>
+        <a class="btn btn-gold" href="#reserva">Consultar disponibilidade</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMULÁRIO ===== -->
+<section id="reserva">
+  <div class="wrap form-grid">
+    <div class="reveal">
+      <span class="eyebrow">Reserva assistida</span>
+      <h2>Vamos desenhar a sua viagem a Andorra</h2>
+      <p class="lead">Conte quem vai viajar e retornamos pelo WhatsApp com a disponibilidade e uma proposta personalizada. Sem compromisso.</p>
+      <div class="contact-alt">
+        <p>Prefere conversar agora?</p>
+        <a class="btn btn-dark js-wa" href="#" data-msg="Olá! Gostaria de consultar disponibilidade para o Ski Andorra, de 13 a 19 de janeiro de 2027.">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <form id="lead-form" class="reveal" novalidate>
+      <div id="form-fields">
+        <label>Quem vai viajar?</label>
+        <div class="chips">
+          <input type="radio" name="perfil" id="p-fam" value="Família"><label for="p-fam">Família</label>
+          <input type="radio" name="perfil" id="p-cas" value="Casal"><label for="p-cas">Casal</label>
+          <input type="radio" name="perfil" id="p-ami" value="Grupo de amigos"><label for="p-ami">Grupo de amigos</label>
+        </div>
+        <div class="row">
+          <div><label for="nome">Nome</label><input id="nome" name="nome" required autocomplete="name"></div>
+          <div><label for="whats">WhatsApp</label><input id="whats" name="whatsapp" required inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999"></div>
+        </div>
+        <label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email">
+        <div class="row">
+          <div><label for="adultos">Adultos</label><select id="adultos" name="adultos"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>Mais de 6</option></select></div>
+          <div><label for="criancas">Crianças</label><select id="criancas" name="criancas"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+        </div>
+        <label for="nivel">Experiência na neve</label>
+        <select id="nivel" name="nivel">
+          <option>Será a primeira vez</option>
+          <option>Já esquiamos algumas vezes</option>
+          <option>Esquiamos com frequência</option>
+          <option>O grupo tem níveis diferentes</option>
+        </select>
+        <label for="msg">Alguma observação?</label>
+        <textarea id="msg" name="mensagem" placeholder="Idades das crianças, preferência de quarto, voos..."></textarea>
+        <button class="btn btn-gold" type="submit">Quero receber a proposta</button>
+        <p class="consent">Ao enviar, você concorda em ser contatado pela ATF Travel sobre esta viagem. Seus dados não são compartilhados com terceiros.</p>
+      </div>
+      <div class="ok" id="form-ok">
+        <h3>Recebemos o seu pedido</h3>
+        <p class="lead" style="margin:0 auto 22px">Em instantes você será direcionado ao nosso WhatsApp. Se a janela não abrir, use o botão abaixo.</p>
+        <a class="btn btn-gold" id="ok-wa" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="duvidas" class="faq">
+  <div class="wrap">
+    <div style="text-align:center"><span class="eyebrow">Dúvidas frequentes</span><h2>Antes de reservar</h2></div>
+    <div class="faq-list">
+      <details><summary>Nunca esquiei. Andorra é indicada para iniciantes?</summary><p>Sim. Grandvalira tem áreas amplas para iniciantes e escolas de esqui com instrutores acostumados a receber crianças e adultos na primeira experiência. As aulas são contratadas à parte e ajudamos a escolher entre aulas em grupo ou particulares.</p></details>
+      <details><summary>Como chego a Andorra?</summary><p>Andorra não tem aeroporto comercial. O acesso mais comum é por Barcelona, de onde seguimos em van privativa por cerca de três horas de estrada até os Pireneus. O traslado de ida e volta já está incluso.</p></details>
+      <details><summary>As passagens aéreas estão incluídas?</summary><p>Não. O pacote começa e termina em Barcelona. Podemos cotar os voos do Brasil para você, com horários compatíveis com o traslado.</p></details>
+      <details><summary>E as crianças? Qual o valor?</summary><p>O valor de € 1.983 por pessoa considera adultos. Para crianças, o ticket lift, o equipamento e a acomodação variam conforme a idade e o quarto. Informe as idades no formulário e enviamos a proposta completa.</p></details>
+      <details><summary>Preciso levar roupa de esqui?</summary><p>O equipamento (esqui ou snowboard, botas e bastões) está incluso. Roupas térmicas, jaqueta, calça impermeável, luvas, óculos e capacete são por sua conta. Enviamos uma lista do que levar e indicamos onde alugar ou comprar, se preferir.</p></details>
+      <details><summary>Quais são as formas de pagamento?</summary><p>Em até 6x no cartão. Os valores estão em euros e as condições finais são confirmadas na proposta, conforme a disponibilidade no momento da reserva.</p></details>
+      <details><summary>Posso mudar as datas ou o número de noites?</summary><p>Este roteiro tem saída de 13 a 19 de janeiro de 2027. Se precisar de outras datas ou de uma extensão em Barcelona ou Madri, inclusive com ingresso para um jogo do Barcelona ou do Real Madrid, montamos uma versão sob medida.</p></details>
+      <details><summary>Preciso de seguro viagem?</summary><p>Sim, recomendamos fortemente um seguro viagem internacional com cobertura para esportes de inverno. O ticket lift inclui um seguro específico das pistas, mas ele não substitui o seguro viagem.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="logo" href="#top"><img src="logo.png" alt="ATF Snow Trip" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="logo-fallback">AT|F <em>Snow Trip</em></span></a>
+      <div>Conforto, exclusividade e memórias para a vida toda.<br><a class="js-wa" href="#" data-msg="Olá! Vim pela página do Ski Andorra 2027.">WhatsApp</a> · <a href="https://whatsapp.com/channel/0029VbCwdluGU3BRbxkBja3m" target="_blank" rel="noopener">Canal ATF Travel</a> · <a href="https://atft.com.br">atft.com.br</a></div>
+    </div>
+    <div class="legal">© ATF Travel · ATF Snow Trip. Valores sujeitos a disponibilidade e confirmação no momento da reserva.</div>
+  </div>
+</footer>
+
+<a class="wa-float js-wa" href="#" aria-label="Falar no WhatsApp" data-msg="Olá! Vi a página do Ski Andorra 2027 e gostaria de mais informações.">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4c-1-1.6-1.5-3.5-1.5-5.4C5.4 9.8 10.1 5.1 16 5.1s10.6 4.7 10.6 10.5S21.8 26.1 16 26.1zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+  // Endereço do webhook do Make (planilha de leads). Preencher pela equipe técnica.
+  const FORM_WEBHOOK_URL = '';
+
+  const WA = window.WHATSAPP_NUMBER;
+  const waLink = (msg) => 'https://wa.me/' + WA + '?text=' + encodeURIComponent(msg);
+  const track = (ev, data) => {
+    try { if (window.fbq) fbq('track', ev, data || {}); } catch (e) {}
+    try { if (window.gtag) gtag('event', ev === 'Lead' ? 'generate_lead' : 'contact', Object.assign({ destino: 'andorra' }, data || {})); } catch (e) {}
+  };
+
+  // Botões de WhatsApp
+  document.querySelectorAll('.js-wa').forEach(a => {
+    a.href = waLink(a.dataset.msg || 'Olá! Gostaria de informações sobre o Ski Andorra 2027.');
+    a.target = '_blank'; a.rel = 'noopener';
+    a.addEventListener('click', () => track('Contact', { origem: 'whatsapp' }));
+  });
+
+  // Header sólido ao rolar
+  const header = document.querySelector('header');
+  const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Pré-seleção de perfil: links da página e ?perfil=familia|casal|amigos
+  const perfilMap = { familia: 'p-fam', casal: 'p-cas', amigos: 'p-ami' };
+  const setPerfil = (k) => { const el = document.getElementById(perfilMap[k]); if (el) el.checked = true; };
+  document.querySelectorAll('.js-perfil').forEach(a => a.addEventListener('click', () => setPerfil(a.dataset.perfil)));
+  const params = new URLSearchParams(location.search);
+  if (params.get('perfil')) setPerfil(params.get('perfil').toLowerCase());
+
+  // Formulário
+  const form = document.getElementById('lead-form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const nome = form.nome.value.trim(), whats = form.whatsapp.value.trim();
+    if (!nome || whats.replace(/\D/g, '').length < 10) {
+      (nome ? form.whatsapp : form.nome).focus();
+      (nome ? form.whatsapp : form.nome).style.borderColor = '#B5543C';
+      return;
+    }
+    const perfil = (form.querySelector('input[name=perfil]:checked') || {}).value || 'Não informado';
+    const data = {
+      destino: 'Andorra', saida: '13 a 19/01/2027', perfil, nome, whatsapp: whats,
+      email: form.email.value.trim(), adultos: form.adultos.value, criancas: form.criancas.value,
+      nivel: form.nivel.value, mensagem: form.mensagem.value.trim(),
+      utm_source: params.get('utm_source') || '', utm_medium: params.get('utm_medium') || '',
+      utm_campaign: params.get('utm_campaign') || '', utm_content: params.get('utm_content') || '',
+      pagina: location.href, data_envio: new Date().toISOString()
+    };
+    if (FORM_WEBHOOK_URL) {
+      try { await fetch(FORM_WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }); } catch (err) {}
+    }
+    track('Lead', { perfil });
+    const msg = 'Olá! Sou ' + nome + ' e gostaria de uma proposta para o Ski Andorra (13 a 19/01/2027).\n' +
+      'Perfil: ' + perfil + ' · Adultos: ' + data.adultos + ' · Crianças: ' + data.criancas + '\n' +
+      'Experiência na neve: ' + data.nivel + (data.mensagem ? '\nObs.: ' + data.mensagem : '');
+    const link = waLink(msg);
+    document.getElementById('form-fields').style.display = 'none';
+    document.getElementById('form-ok').style.display = 'block';
+    document.getElementById('ok-wa').href = link;
+    setTimeout(() => { window.open(link, '_blank'); }, 1200);
+  });
+
+  // Animação suave de entrada
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), { threshold: .12 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+</script>
+</body>
+</html>
