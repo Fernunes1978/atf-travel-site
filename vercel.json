@@ -2,6 +2,7 @@
   "redirects": [
     { "source": "/aspen", "destination": "/aspen/", "permanent": true },
     { "source": "/andorra", "destination": "/andorra/", "permanent": true },
-    { "source": "/casa-orlando", "destination": "/casa-orlando/", "permanent": true }
+    { "source": "/casa-orlando", "destination": "/casa-orlando/", "permanent": true },
+    { "source": "/orlando-championsgate", "destination": "/orlando-championsgate/", "permanent": true }
   ]
 }
